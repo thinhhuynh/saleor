@@ -34,9 +34,6 @@ class WarehouseQueryset(models.QuerySet):
         return self.filter(shipping_zones__channels=channel_pk).first()
 
     def applicable_for_click_and_collect(self, lines: QuerySet[CheckoutLine]):
-        # def lines_quantity(product_variant_id):
-        # return sum(line.quantity for line in lines if
-        # line.variant.id == product_variant_id)
 
         lines_quantity = (
             lines.filter(variant_id=OuterRef("product_variant_id"))
