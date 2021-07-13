@@ -146,7 +146,7 @@ class Warehouse(ModelWithMetadata):
                     )
                 }
             )
-        super().clean()
+        return super().clean()
 
 
 class StockQuerySet(models.QuerySet):
