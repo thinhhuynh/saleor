@@ -34,7 +34,7 @@ class WarehouseQueryset(models.QuerySet):
         return self.filter(shipping_zones__channels=channel_pk).first()
 
     def applicable_for_click_and_collect_no_quantity_check(
-        self, lines: QuerySet[CheckoutLine]
+        self, lines: QuerySet[CheckoutLine], country: str
     ):
 
         warehouse_cc_option_enum = WarehouseClickAndCollectOption
@@ -43,7 +43,8 @@ class WarehouseQueryset(models.QuerySet):
         ).select_related("product_variant")
 
         warehouses_qs = (
-            self.prefetch_related(Prefetch("stock_set", queryset=stocks_qs))
+            self.for_country(country)
+            .prefetch_related(Prefetch("stock_set", queryset=stocks_qs))
             .filter(stock__in=stocks_qs)
             .annotate(stock_num=Count("stock__id"))
             .filter(
@@ -54,7 +55,9 @@ class WarehouseQueryset(models.QuerySet):
         )
         return warehouses_qs
 
-    def applicable_for_click_and_collect(self, lines: QuerySet[CheckoutLine]):
+    def applicable_for_click_and_collect(
+        self, lines: QuerySet[CheckoutLine], country: str
+    ):
         warehouse_cc_option_enum = WarehouseClickAndCollectOption
         lines_quantity = (
             lines.filter(variant_id=OuterRef("product_variant_id"))
@@ -74,7 +77,8 @@ class WarehouseQueryset(models.QuerySet):
         )
 
         warehouses_qs = (
-            self.prefetch_related(Prefetch("stock_set", queryset=stocks_qs))
+            self.for_country(country)
+            .prefetch_related(Prefetch("stock_set", queryset=stocks_qs))
             .filter(stock__in=stocks_qs)
             .annotate(stock_num=Count("stock__id"))
             .filter(
