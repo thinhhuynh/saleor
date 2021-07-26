@@ -184,9 +184,8 @@ class WarehouseByIdLoader(DataLoader):
 
     def batch_load(self, keys):
         warehouses = Warehouse.objects.in_bulk(keys)
-        return [
-            warehouses.get(UUID(str(warehouse_uuid))) for warehouse_uuid in keys
-        ]  # psycopg converts these UUID's once, possible bug?
+
+        return [warehouses.get(UUID(str(warehouse_uuid))) for warehouse_uuid in keys]
 
 
 class WarehouseCountryCodeByChannelLoader(DataLoader):

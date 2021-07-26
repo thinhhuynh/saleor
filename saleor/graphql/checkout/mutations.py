@@ -1187,7 +1187,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
                 {
                     "delivery_method": ValidationError(
                         "Only one delivery method should be picked - C&C or Shipping",
-                        code=CheckoutErrorCode.SHIPPING_METHOD_NOT_APPLICABLE,
+                        code=CheckoutErrorCode.INVALID,
                     )
                 }
             )
