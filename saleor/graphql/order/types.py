@@ -658,12 +658,6 @@ class Order(CountableDjangoObjectType):
     is_shipping_required = graphene.Boolean(
         description="Returns True, if order requires shipping.", required=True
     )
-    is_click_and_collect = graphene.Boolean(
-        description=(
-            "Returns True, if click and collect is chosen ",
-            "as a delivery method for this checkout.",
-        ),
-    )
     delivery_method = graphene.Field(
         DeliveryMethod,
         description="The delivery method selected for this checkout",
@@ -728,6 +722,7 @@ class Order(CountableDjangoObjectType):
             "shipping_address",
             "shipping_method",
             "shipping_method_name",
+            "collection_point_name",
             "shipping_price",
             "shipping_tax_rate",
             "status",
@@ -1051,10 +1046,6 @@ class Order(CountableDjangoObjectType):
             )
             return collection_point
         return None
-
-    @staticmethod
-    def resolve_is_click_and_collect(root: models.Order, info):
-        return bool(root.collection_point_id)
 
     @staticmethod
     @traced_resolver
