@@ -1048,7 +1048,6 @@ class Order(CountableDjangoObjectType):
         return None
 
     @staticmethod
-    @traced_resolver
     # TODO: We should optimize it in/after PR#5819
     def resolve_available_shipping_methods(root: models.Order, info):
         available = get_valid_shipping_methods_for_order(root)
