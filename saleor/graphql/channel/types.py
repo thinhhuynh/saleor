@@ -1,6 +1,9 @@
+from typing import Union
+
 import graphene
 from graphene.types.resolver import get_default_resolver
 from graphene_django import DjangoObjectType
+from django.db.models import Model
 
 from ...channel import models
 from ...core.permissions import ChannelPermissions
@@ -30,9 +33,13 @@ class ChannelContextType(DjangoObjectType):
         return root.node.pk
 
     @classmethod
-    def is_type_of(cls, root: ChannelContext, info):
-        print(cls.__name__, type(root))
-        return super().is_type_of(root.node, info)
+    def is_type_of(cls, root: Union[ChannelContext, Model], info):
+        # Unwrap node from ChannelContext if it didn't happen already
+        if isinstance(root, ChannelContext):
+            return super().is_type_of(root.node, info)
+
+        # Check type that was already unwrapped by the Entity union check
+        return super().is_type_of(root, info)
 
     @staticmethod
     def resolve_translation(root: ChannelContext, info, language_code):
@@ -59,11 +66,6 @@ class ChannelContextTypeWithMetadata(ChannelContextType):
     def resolve_private_metadata(root: ChannelContext, info):
         # Used in metadata API to resolve private metadata fields from an instance.
         return ObjectWithMetadata.resolve_private_metadata(root.node, info)
-
-    @classmethod
-    def is_type_of(cls, root: ChannelContext, info):
-        print(cls.__name__, type(root))
-        return super().is_type_of(root, info)
 
 
 class Channel(CountableDjangoObjectType):

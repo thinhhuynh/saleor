@@ -285,15 +285,3 @@ class CountableDjangoObjectType(DjangoObjectType):
             "{}CountableConnection".format(cls.__name__), node=cls
         )
         super().__init_subclass_with_meta__(*args, connection=countable_conn, **kwargs)
-
-    @classmethod
-    def is_type_of(cls, root, info):
-        print(cls.__name__, type(root))
-        r = super().is_type_of(root, info)
-        print("OK")
-        return r
-        try:
-            return super().is_type_of(root.node, info)
-        except AttributeError:
-            return super().is_type_of(root, info)
-            
