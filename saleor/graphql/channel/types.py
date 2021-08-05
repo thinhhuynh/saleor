@@ -1,9 +1,9 @@
 from typing import Union
 
 import graphene
+from django.db.models import Model
 from graphene.types.resolver import get_default_resolver
 from graphene_django import DjangoObjectType
-from django.db.models import Model
 
 from ...channel import models
 from ...core.permissions import ChannelPermissions
