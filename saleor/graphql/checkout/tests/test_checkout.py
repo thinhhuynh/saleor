@@ -2509,7 +2509,7 @@ def test_checkout_delivery_method_update(
         assert len(errors) == 1
         assert errors[0]["field"] == "deliveryMethod"
         assert (
-            errors[0]["code"] == CheckoutErrorCode.SHIPPING_METHOD_NOT_APPLICABLE.name
+            errors[0]["code"] == CheckoutErrorCode.DELIVERY_METHOD_NOT_APPLICABLE.name
         )
         assert checkout.shipping_method is None
 
@@ -2636,7 +2636,7 @@ def test_checkout_delivery_method_update_excluded_postal_code(
     errors = data["errors"]
     assert len(errors) == 1
     assert errors[0]["field"] == "deliveryMethod"
-    assert errors[0]["code"] == CheckoutErrorCode.SHIPPING_METHOD_NOT_APPLICABLE.name
+    assert errors[0]["code"] == CheckoutErrorCode.DELIVERY_METHOD_NOT_APPLICABLE.name
     assert checkout.shipping_method is None
     assert (
         mock_is_shipping_method_available.call_count
@@ -2697,7 +2697,7 @@ def test_checkout_delivery_method_update_shipping_zone_without_channel(
     errors = data["errors"]
     assert len(errors) == 1
     assert errors[0]["field"] == "deliveryMethod"
-    assert errors[0]["code"] == CheckoutErrorCode.SHIPPING_METHOD_NOT_APPLICABLE.name
+    assert errors[0]["code"] == CheckoutErrorCode.DELIVERY_METHOD_NOT_APPLICABLE.name
     assert checkout.shipping_method is None
 
 

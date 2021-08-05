@@ -1044,11 +1044,10 @@ class Order(CountableDjangoObjectType):
             wrap_shipping_method_with_channel_context
         )
 
-    @staticmethod
-    @traced_resolver
-    def resolve_delivery_method(root: models.Order, info):
+    @classmethod
+    def resolve_delivery_method(cls, root: models.Order, info):
         if root.shipping_method_id:
-            return Order.resolve_shipping_method(root, info)
+            return cls.resolve_shipping_method(root, info)
         if root.collection_point_id:
             collection_point = WarehouseByIdLoader(info.context).load(
                 root.collection_point_id
@@ -1057,6 +1056,7 @@ class Order(CountableDjangoObjectType):
         return None
 
     @staticmethod
+    @traced_resolver
     # TODO: We should optimize it in/after PR#5819
     def resolve_available_shipping_methods(root: models.Order, info):
         available = get_valid_shipping_methods_for_order(root)
@@ -1090,15 +1090,16 @@ class Order(CountableDjangoObjectType):
 
         return instances
 
-    @staticmethod
-    def resolve_available_collection_points(root: models.Order, info):
+    @classmethod
+    @traced_resolver
+    def resolve_available_collection_points(cls, root: models.Order, info):
         def get_available_collection_points(data):
             lines, address = data
 
             return get_valid_collection_points_for_order(lines, address)
 
-        lines = Order.resolve_lines(root, info)
-        address = Order.resolve_shipping_address(root, info)
+        lines = cls.resolve_lines(root, info)
+        address = cls.resolve_shipping_address(root, info)
         return Promise.all([lines, address]).then(get_available_collection_points)
 
     @staticmethod
