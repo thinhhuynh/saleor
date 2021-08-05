@@ -491,8 +491,11 @@ class ProductVariant(ChannelContextTypeWithMetadata, CountableDjangoObjectType):
         return convert_weight_to_default_weight_unit(root.node.weight)
 
 
-@key(fields="id")
+@key(fields="id channelSlug")
 class Product(ChannelContextTypeWithMetadata, CountableDjangoObjectType):
+    channel_slug = graphene.String(
+        description="Channel string"
+    )
     description_json = graphene.JSONString(
         description="Description of the product (JSON).",
         deprecation_reason=(
@@ -590,6 +593,10 @@ class Product(ChannelContextTypeWithMetadata, CountableDjangoObjectType):
             "default_variant",
             "rating",
         ]
+
+    @staticmethod
+    def resolve_channel_slug(root: ChannelContext[models.Product], info):
+        return root.channel_slug
 
     @staticmethod
     def resolve_default_variant(root: ChannelContext[models.Product], info):
@@ -847,8 +854,14 @@ class Product(ChannelContextTypeWithMetadata, CountableDjangoObjectType):
         )
 
     @staticmethod
-    def __resolve_reference(root: ChannelContext[models.Product], _info, **_kwargs):
-        return graphene.Node.get_node_from_global_id(_info, root.node.id)
+    def __resolve_reference(root: "Product", info, **_kwargs):
+        from ..resolvers import resolve_product_by_id
+        requestor = get_user_or_app_from_context(info.context)
+        _type, id = from_global_id_or_error(root.id, Product)
+        product = resolve_product_by_id(
+            info, id, channel_slug=root.channel_slug, requestor=requestor
+        )
+        return ChannelContext(node=product, channel_slug=root.channel_slug) if product else None
 
     @staticmethod
     def resolve_weight(root: ChannelContext[models.Product], _info, **_kwargs):
