@@ -30,6 +30,7 @@ from ...channel import ChannelContext, ChannelQsContext
 from ...channel.dataloaders import ChannelBySlugLoader
 from ...channel.types import ChannelContextType, ChannelContextTypeWithMetadata
 from ...channel.utils import get_default_channel_slug_or_graphql_error
+from ...common.dataloaders import WarehouseCountryCodeByChannelLoader
 from ...core.connection import CountableDjangoObjectType
 from ...core.enums import ReportingPeriod
 from ...core.fields import (
@@ -66,7 +67,6 @@ from ...utils.filters import reporting_period_to_date
 from ...warehouse.dataloaders import (
     AvailableQuantityByProductVariantIdCountryCodeAndChannelSlugLoader,
     StocksWithAvailableQuantityByProductVariantIdCountryCodeAndChannelLoader,
-    WarehouseCountryCodeByChannelLoader,
 )
 from ...warehouse.types import Stock
 from ..dataloaders import (

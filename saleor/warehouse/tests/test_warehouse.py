@@ -2,8 +2,8 @@ import pytest
 from django.db.models import Sum
 
 from ...shipping.models import ShippingZone
-from ..models import Stock, Warehouse
 from .. import WarehouseClickAndCollectOption
+from ..models import Stock, Warehouse
 
 
 def test_get_first_warehouse_for_channel_no_shipping_zone(
