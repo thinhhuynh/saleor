@@ -1071,7 +1071,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
             info,
             shipping_method_id,
             only_type=ShippingMethod,
-            field="shipping_method_id",
+            field="delivery_method_id",
             qs=shipping_models.ShippingMethod.objects.prefetch_related(
                 "postal_code_rules"
             ),
@@ -1081,7 +1081,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
             checkout_info, lines, shipping_method=shipping_method, collection_point=None
         )
 
-        checkout_delivery_method_update = cls._update_delivery_method(
+        cls._update_delivery_method(
             manager,
             checkout,
             shipping_method=shipping_method,
@@ -1090,7 +1090,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
         recalculate_checkout_discount(
             manager, checkout_info, lines, info.context.discounts
         )
-        return checkout_delivery_method_update
+        return CheckoutDeliveryMethodUpdate(checkout=checkout)
 
     @classmethod
     def perform_on_collection_point(
@@ -1100,18 +1100,19 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
             info,
             collection_point_id,
             only_type=Warehouse,
-            field="collection_point_id",
+            field="delivery_method_id",
             qs=warehouse_models.Warehouse.objects.select_related("address"),
         )
-        CheckoutDeliveryMethodUpdate._check_delivery_method(
+        cls._check_delivery_method(
             checkout_info,
             lines,
             shipping_method=None,
             collection_point=collection_point,
         )
-        return cls._update_delivery_method(
+        cls._update_delivery_method(
             manager, checkout, shipping_method=None, collection_point=collection_point
         )
+        return CheckoutDeliveryMethodUpdate(checkout=checkout)
 
     @staticmethod
     def _check_delivery_method(
@@ -1134,7 +1135,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
         if not delivery_method_is_valid:
             raise ValidationError(
                 {
-                    "delivery_method": ValidationError(
+                    "delivery_method_id": ValidationError(
                         error_msg,
                         code=CheckoutErrorCode.DELIVERY_METHOD_NOT_APPLICABLE.value,
                     )
@@ -1148,7 +1149,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
         *,
         shipping_method: Optional[ShippingMethod],
         collection_point: Optional[Warehouse]
-    ) -> "CheckoutDeliveryMethodUpdate":
+    ) -> None:
         checkout.shipping_method = shipping_method
         checkout.collection_point = collection_point
         checkout.save(
@@ -1156,10 +1157,8 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
         )
         manager.checkout_updated(checkout)
 
-        return CheckoutDeliveryMethodUpdate(checkout=checkout)
-
     @staticmethod
-    def _resolve_delivery_method_id(id_) -> Optional[str]:
+    def _resolve_delivery_method_type(id_) -> Optional[str]:
         if id_ is None:
             return None
 
@@ -1170,7 +1169,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
         if str_type not in possible_types:
             raise ValidationError(
                 {
-                    "delivery_method": ValidationError(
+                    "delivery_method_id": ValidationError(
                         "ID does not belong to Warehouse or ShippingMethod",
                         code=CheckoutErrorCode.INVALID.value,
                     )
@@ -1204,7 +1203,7 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
                     )
                 }
             )
-        type_name = cls._resolve_delivery_method_id(delivery_method_id)
+        type_name = cls._resolve_delivery_method_type(delivery_method_id)
 
         if type_name == "Warehouse":
             return cls.perform_on_collection_point(
