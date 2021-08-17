@@ -1061,7 +1061,6 @@ class CheckoutDeliveryMethodUpdate(BaseMutation):
             "of the checkout."
         )
         error_type_class = CheckoutError
-        error_type_field = "checkout_error"
 
     @classmethod
     def perform_on_shipping_method(

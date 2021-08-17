@@ -4,6 +4,8 @@ All notable, unreleased changes to this project will be documented in this file.
 
 # 3.1.0 [Unreleased]
 
+- Add Click&Collect feature - #SALEOR-2992 by @kuchichan
+
 # 3.0.0 [Unreleased]
 
 - Extend editorjs validator to accept blocks different than text - #SALEOR-3354 by @mociepka
