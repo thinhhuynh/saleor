@@ -1,20 +1,31 @@
+from collections import defaultdict
 from datetime import date
 from typing import TYPE_CHECKING, Dict, Iterable, Optional
 
 from dateutil.relativedelta import relativedelta
+from django.core.exceptions import ValidationError
+from django.db.models.expressions import Exists, OuterRef
 from django.utils import timezone
 
+from ..checkout.error_codes import CheckoutErrorCode
 from ..checkout.models import Checkout
 from ..core.utils.promo_code import InvalidPromoCode, generate_promo_code
+from ..core.utils.validators import user_is_valid
+from ..order.actions import create_fulfillments
+from ..order.models import OrderLine
+from ..product import ProductTypeKind
+from ..product.models import Product, ProductType, ProductVariant
 from ..site import GiftCardSettingsExpiryType
 from . import events
 from .models import GiftCard
 from .notifications import send_gift_card_notification
 
 if TYPE_CHECKING:
+    from django.db.models import QuerySet
+
     from ..account.models import User
     from ..app.models import App
-    from ..order.models import Order, OrderLine
+    from ..order.models import Order
     from ..plugins.manager import PluginsManager
     from ..site.models import SiteSettings
 
@@ -63,6 +74,92 @@ def activate_gift_card(gift_card: GiftCard):
     if not gift_card.is_active:
         gift_card.is_active = True
         gift_card.save(update_fields=["is_active"])
+
+
+def fulfill_non_shippable_gift_cards(
+    order: "Order",
+    order_lines: Iterable[OrderLine],
+    settings: "SiteSettings",
+    requestor_user: Optional["User"],
+    app: Optional["App"],
+    manager: "PluginsManager",
+):
+    if not user_is_valid(requestor_user):
+        requestor_user = None
+    line_pks = [line.pk for line in order_lines]
+    gift_card_lines = get_non_shippable_gift_card_lines(line_pks)
+    if not gift_card_lines:
+        return
+    fulfill_gift_card_lines(gift_card_lines, requestor_user, app, order, manager)
+    quantities = {line.pk: line.quantity for line in gift_card_lines}
+    return gift_cards_create(
+        order, gift_card_lines, quantities, settings, requestor_user, app, manager
+    )
+
+
+def get_non_shippable_gift_card_lines(line_ids: Iterable[int]):
+    gift_card_lines = get_gift_card_lines(line_ids)
+    gift_card_lines = gift_card_lines.filter(
+        is_shipping_required=False,
+    )
+    return gift_card_lines
+
+
+def get_gift_card_lines(line_pks: Iterable[int]):
+    product_types = ProductType.objects.filter(kind=ProductTypeKind.GIFT_CARD)
+    products = Product.objects.filter(
+        Exists(product_types.filter(pk=OuterRef("product_type_id")))
+    )
+    variants = ProductVariant.objects.filter(
+        Exists(products.filter(pk=OuterRef("product_id")))
+    )
+    gift_card_lines = OrderLine.objects.filter(id__in=line_pks).filter(
+        Exists(variants.filter(pk=OuterRef("variant_id")))
+    )
+
+    return gift_card_lines
+
+
+def fulfill_gift_card_lines(
+    gift_card_lines: "QuerySet",
+    requestor_user: Optional["User"],
+    app: Optional["App"],
+    order: "Order",
+    manager: "PluginsManager",
+):
+    lines_for_warehouses = defaultdict(list)
+    channel_slug = order.channel.slug
+    for line in gift_card_lines.prefetch_related(
+        "allocations__stock", "variant__stocks"
+    ):
+        if allocations := line.allocations.all():
+            for allocation in allocations:
+                quantity = allocation.quantity_allocated
+                if quantity > 0:
+                    warehouse_pk = str(allocation.stock.warehouse_id)
+                    lines_for_warehouses[warehouse_pk].append(
+                        {"order_line": line, "quantity": quantity}
+                    )
+        else:
+            stock = line.variant.stocks.for_channel(channel_slug).first()
+            if not stock:
+                raise ValidationError(
+                    "Lack of gift card stock for checkout channel.",
+                    code=CheckoutErrorCode.GIFT_CARD_NOT_APPLICABLE.value,
+                )
+            warehouse_pk = str(stock.warehouse_id)
+            lines_for_warehouses[warehouse_pk].append(
+                {"order_line": line, "quantity": line.quantity}
+            )
+
+    return create_fulfillments(
+        requestor_user,
+        app,
+        order,
+        dict(lines_for_warehouses),
+        manager,
+        notify_customer=True,
+    )
 
 
 def gift_cards_create(
