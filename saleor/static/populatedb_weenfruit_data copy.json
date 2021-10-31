@@ -1,0 +1,3991 @@
+[{
+  "model": "product.category",
+  "pk": 7,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Sầu riêng",
+    "slug": "sau-rieng",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": ""
+        },
+        "type": "paragraph"
+      }]
+    },
+    "parent": null,
+    "background_image": "category-backgrounds/sau-rieng_8AEdvHR.jpg",
+    "background_image_alt": "",
+    "lft": 1,
+    "rght": 8,
+    "tree_id": 1,
+    "level": 0
+  }
+},
+{
+  "model": "product.category",
+  "pk": 8,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Bưởi da xanh",
+    "slug": "buoi-da-xanh",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": ""
+        },
+        "type": "paragraph"
+      }]
+    },
+    "parent": null,
+    "background_image": "category-backgrounds/buoi-da-xanh_CFNOYEO.jpg",
+    "background_image_alt": "",
+    "lft": 1,
+    "rght": 6,
+    "tree_id": 2,
+    "level": 0
+  }
+},
+{
+  "model": "product.category",
+  "pk": 9,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Trái cây bốn mùa",
+    "slug": "trai-cay-bon-mua",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": ""
+        },
+        "type": "paragraph"
+      }]
+    },
+    "parent": null,
+    "background_image": "category-backgrounds/trai-cay-bon-mua_j1eQDeZ.jpg",
+    "background_image_alt": "",
+    "lft": 1,
+    "rght": 10,
+    "tree_id": 3,
+    "level": 0
+  }
+},
+{
+  "model": "product.category",
+  "pk": 10,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Sapôchê",
+    "slug": "sapoche",
+    "description": {},
+    "parent": 9,
+    "background_image": "category-backgrounds/sapoche_aQjIlZr.jpg",
+    "background_image_alt": "",
+    "lft": 2,
+    "rght": 3,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "product.category",
+  "pk": 11,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Thanh long",
+    "slug": "thanh long",
+    "description": {},
+    "parent": 9,
+    "background_image": "category-backgrounds/thanh-long_HuImTaR.jpg",
+    "background_image_alt": "",
+    "lft": 4,
+    "rght": 5,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "product.category",
+  "pk": 12,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Mít",
+    "slug": "mit",
+    "description": {},
+    "parent": 9,
+    "background_image": "category-backgrounds/mit_6ziH1ON.jpg",
+    "background_image_alt": "",
+    "lft": 6,
+    "rght": 7,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "product.category",
+  "pk": 13,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": "",
+    "seo_description": "",
+    "name": "Trái cây khác",
+    "slug": "trai-cay-khac",
+    "description": {},
+    "parent": 9,
+    "background_image": "category-backgrounds/trai-cay-khac_awJisre.jpg",
+    "background_image_alt": "",
+    "lft": 8,
+    "rght": 9,
+    "tree_id": 3,
+    "level": 1
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 7,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Sầu riêng",
+    "slug": "sau-rieng",
+    "has_variants": true,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "1.0:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 8,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Bưởi",
+    "slug": "Bưởi",
+    "has_variants": true,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "0.2:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 9,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Trái cây bốn mùa",
+    "slug": "trai-cay-bon-mua",
+    "has_variants": true,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "1.0:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 10,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Sapôchê ",
+    "slug": "sapoche",
+    "has_variants": false,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "1.0:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 11,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Thanh long",
+    "slug": "thanh-long",
+    "has_variants": false,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "1.0:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 12,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Mít",
+    "slug": "mit",
+    "has_variants": true,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "0.5:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.producttype",
+  "pk": 13,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "name": "Trái cây khác",
+    "slug": "trai-cay-khac",
+    "has_variants": true,
+    "is_shipping_required": true,
+    "is_digital": false,
+    "weight": "1.0:kg",
+    "kind": "normal"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 61,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "taxes": {
+        "vatlayer": {
+          "code": "standard",
+          "description": "standard"
+        }
+      }
+    },
+    "seo_title": "",
+    "seo_description": "Tonight, my love, let us take fat brushes and paint the skies with the shades of nebula tides. Get the dark, moody shades of the ether.",
+    "description_plaintext": "Tonight, my love, let us take fat brushes and paint the skies with the shades of nebula tides. Get the dark, moody shades of the ether.",
+    "product_type": 7,
+    "name": "Sầu riêng Ri 6",
+    "slug": "sau-rieng-ri-6",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Tonight, my love, let us take fat brushes and paint the skies with the shades of nebula tides. Get the dark, moody shades of the ether."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 7,
+    "updated_at": "2020-08-31T06:53:16.102Z",
+    "charge_taxes": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 62,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "The rich, deep hue of space dust. Vacuum packed and airlocked for long-lasting freshness of color.",
+    "description_plaintext": "The rich, deep hue of space dust. Vacuum packed and airlocked for long-lasting freshness of color.",
+    "product_type": 7,
+    "name": "Sầu riêng Monthong",
+    "slug": "sau-rieng-monthong",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "The rich, deep hue of space dust. Vacuum packed and airlocked for long-lasting freshness of color."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 7,
+    "updated_at": "2020-08-31T06:53:16.307Z",
+    "charge_taxes": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 71,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Fell from a tree straight into the bottle. No additives, no preservatives, just the refreshing taste of pure sun-kissed Californian oranges.",
+    "description_plaintext": "Fell from a tree straight into the bottle. No additives, no preservatives, just the refreshing taste of pure sun-kissed Californian oranges.",
+    "product_type": 9,
+    "name": "Bưởi da xanh",
+    "slug": "buoi-da-xanh",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Fell from a tree straight into the bottle. No additives, no preservatives, just the refreshing taste of pure sun-kissed Californian oranges."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 8,
+    "updated_at": "2020-08-31T06:53:17.155Z",
+    "charge_taxes": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 72,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Fell straight from the tree, on to Newton’s head, then into the bottle. The autumn taste of English apples. Brought to you by gravity.",
+    "description_plaintext": "Fell straight from the tree, on to Newton’s head, then into the bottle. The autumn taste of English apples. Brought to you by gravity.",
+    "product_type": 9,
+    "name": "Bưởi 5 roi",
+    "slug": "buoi-5-roi",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Fell straight from the tree, on to Newton’s head, then into the bottle. The autumn taste of English apples. Brought to you by gravity."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 8,
+    "updated_at": "2020-08-31T06:53:17.312Z",
+    "charge_taxes": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 81,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "A fine, mature red with a hint of blackberry, an undertone of the alkaline Burgundy soil, a delicate aftertaste of burnt garlic, and a whole lot of grapes.",
+    "description_plaintext": "A fine, mature red with a hint of blackberry, an undertone of the alkaline Burgundy soil, a delicate aftertaste of burnt garlic, and a whole lot of grapes.",
+    "product_type": 10,
+    "name": "Red Wine",
+    "slug": "red-wine",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "A fine, mature red with a hint of blackberry, an undertone of the alkaline Burgundy soil, a delicate aftertaste of burnt garlic, and a whole lot of grapes."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 8,
+    "updated_at": "2020-08-31T06:53:18.558Z",
+    "charge_taxes": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 82,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Watch the slow setting sun of a wild summer evening sink into the horizon as you sip white wine that tastes like bittersweet memories of halcyon days.",
+    "description_plaintext": "Watch the slow setting sun of a wild summer evening sink into the horizon as you sip white wine that tastes like bittersweet memories of halcyon days.",
+    "product_type": 10,
+    "name": "White Wine",
+    "slug": "white-wine",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Watch the slow setting sun of a wild summer evening sink into the horizon as you sip white wine that tastes like bittersweet memories of halcyon days."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 8,
+    "updated_at": "2020-08-31T06:53:30.364Z",
+    "charge_taxes": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 83,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Find your sea legs and then lose the power to use them with extra strong seaman’s lager. Don’t drink and sail, me hearties!",
+    "description_plaintext": "Find your sea legs and then lose the power to use them with extra strong seaman’s lager. Don’t drink and sail, me hearties!",
+    "product_type": 11,
+    "name": "Seaman Lager",
+    "slug": "seaman-lager",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Find your sea legs and then lose the power to use them with extra strong seaman’s lager. Don’t drink and sail, me hearties!"
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 8,
+    "updated_at": "2020-08-31T06:53:18.900Z",
+    "charge_taxes": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 84,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Best beer on the seven seas. A dark ale for when the dark clouds gather overhead. The nutty nautical taste that sailors love.",
+    "description_plaintext": "Best beer on the seven seas. A dark ale for when the dark clouds gather overhead. The nutty nautical taste that sailors love.",
+    "product_type": 11,
+    "name": "Seaman Beer",
+    "slug": "seaman-beer",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Best beer on the seven seas. A dark ale for when the dark clouds gather overhead. The nutty nautical taste that sailors love."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 8,
+    "updated_at": "2020-08-31T06:53:30.527Z",
+    "charge_taxes": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 85,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Add a little color to your life with a Saleor parrot cushion. Turns any old sofa into a rainbow of classy interior design.",
+    "description_plaintext": "Add a little color to your life with a Saleor parrot cushion. Turns any old sofa into a rainbow of classy interior design.",
+    "product_type": 12,
+    "name": "Colored Parrot Cushion",
+    "slug": "colored-parrot-cushion",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Add a little color to your life with a Saleor parrot cushion. Turns any old sofa into a rainbow of classy interior design."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 7,
+    "updated_at": "2020-08-31T06:53:30.677Z",
+    "charge_taxes": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 86,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Minimalist interiors need simple, sleek soft furnishings. Don’t parrot what others do, set your own monochrome trends with Saleor designs.",
+    "description_plaintext": "Minimalist interiors need simple, sleek soft furnishings. Don’t parrot what others do, set your own monochrome trends with Saleor designs.",
+    "product_type": 12,
+    "name": "White Parrot Cushion",
+    "slug": "white-parrot-cushion",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Minimalist interiors need simple, sleek soft furnishings. Don’t parrot what others do, set your own monochrome trends with Saleor designs."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 7,
+    "updated_at": "2020-08-31T06:53:20.430Z",
+    "charge_taxes": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 87,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "Mellow yellow. Step into summer with Saleor. Every time your head goes down, you see these beauties, and your mood bounces right back up.",
+    "description_plaintext": "Mellow yellow. Step into summer with Saleor. Every time your head goes down, you see these beauties, and your mood bounces right back up.",
+    "product_type": 13,
+    "name": "Yellow Plimsolls",
+    "slug": "yellow-plimsolls",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "Mellow yellow. Step into summer with Saleor. Every time your head goes down, you see these beauties, and your mood bounces right back up."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 13,
+    "updated_at": "2020-08-31T06:53:32.761Z",
+    "charge_taxes": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.product",
+  "pk": 88,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {
+      "vatlayer.code": "standard",
+      "vatlayer.description": "standard"
+    },
+    "seo_title": "",
+    "seo_description": "PE at school wouldn’t have been such a drag with these on your feet. Slip on the style and stride tall with Saleor branded plimsolls. PE now stands for pretty elegant.",
+    "description_plaintext": "PE at school wouldn’t have been such a drag with these on your feet. Slip on the style and stride tall with Saleor branded plimsolls. PE now stands for pretty elegant.",
+    "product_type": 13,
+    "name": "White Plimsolls",
+    "slug": "white-plimsolls",
+    "description": {
+      "blocks": [{
+        "data": {
+          "text": "PE at school wouldn’t have been such a drag with these on your feet. Slip on the style and stride tall with Saleor branded plimsolls. PE now stands for pretty elegant."
+        },
+        "type": "paragraph"
+      }]
+    },
+    "category": 13,
+    "updated_at": "2020-08-31T06:53:33.172Z",
+    "charge_taxes": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 1,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 72,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 10,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 85,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 17,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 61,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 19,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 71,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 27,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 81,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 29,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 84,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 30,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 83,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 31,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 62,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2021-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 38,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 86,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 39,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 88,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 40,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 82,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 41,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 87,
+    "channel": 1,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "USD"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 42,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 72,
+    "channel": 2,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 51,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 85,
+    "channel": 2,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 58,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 61,
+    "channel": 2,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 60,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 71,
+    "channel": 2,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 68,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "product": 81,
+    "channel": 2,
+    "visible_in_listings": false,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 70,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": false,
+    "product": 84,
+    "channel": 2,
+    "visible_in_listings": true,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productchannellisting",
+  "pk": 71,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": false,
+    "product": 83,
+    "channel": 2,
+    "visible_in_listings": false,
+    "available_for_purchase": "2020-08-31",
+    "currency": "PLN"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 171,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "546451996",
+    "name": "1l",
+    "product": 61,
+    "track_inventory": true,
+    "weight": "1.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 172,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "546451997",
+    "name": "2.5l",
+    "product": 61,
+    "track_inventory": true,
+    "weight": "2.5:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 173,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "546451999",
+    "name": "5l",
+    "product": 61,
+    "track_inventory": true,
+    "weight": "5.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 174,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "998223591",
+    "name": "1l",
+    "product": 62,
+    "track_inventory": true,
+    "weight": "1.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 175,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "998223599",
+    "name": "2.5l",
+    "product": 62,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 176,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "998223594",
+    "name": "5l",
+    "product": 62,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 190,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "988323582",
+    "name": "500ml",
+    "product": 71,
+    "track_inventory": true,
+    "weight": "1.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 191,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "938323582",
+    "name": "1l",
+    "product": 71,
+    "track_inventory": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 192,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "988323522",
+    "name": "2l",
+    "product": 71,
+    "track_inventory": true,
+    "weight": "2.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 193,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "12312312321",
+    "name": "",
+    "product": 81,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 194,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "1231998121",
+    "name": "",
+    "product": 82,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 195,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "98616712",
+    "name": "",
+    "product": 83,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 196,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "98616713",
+    "name": "",
+    "product": 84,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 197,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "698223582",
+    "name": "45cm x 45cm",
+    "product": 85,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 198,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "698223581",
+    "name": "55cm x 55cm",
+    "product": 85,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 199,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "987126191",
+    "name": "45cm x 45cm",
+    "product": 86,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 200,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "998223590",
+    "name": "55cm x 55cm",
+    "product": 86,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 202,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "93855755",
+    "name": "500ml",
+    "product": 72,
+    "track_inventory": true,
+    "weight": "1.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 203,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "43226647",
+    "name": "1l",
+    "product": 72,
+    "track_inventory": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 204,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "80884671",
+    "name": "2l",
+    "product": 72,
+    "track_inventory": true,
+    "weight": "2.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 242,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "398323583",
+    "name": "39",
+    "product": 87,
+    "track_inventory": true,
+    "weight": "0.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 243,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "398323584",
+    "name": "40",
+    "product": 87,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 244,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "398323585",
+    "name": "41",
+    "product": 87,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 245,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "398323586",
+    "name": "42",
+    "product": 87,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 246,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "398323588",
+    "name": "43",
+    "product": 87,
+    "track_inventory": true,
+    "weight": "0.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 247,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "993223583",
+    "name": "40",
+    "product": 88,
+    "track_inventory": true,
+    "weight": "1.0:kg",
+    "default": true
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 248,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "978223582",
+    "name": "41",
+    "product": 88,
+    "track_inventory": true,
+    "weight": "1.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 249,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "918323583",
+    "name": "40",
+    "product": 88,
+    "track_inventory": true,
+    "weight": "2.0:kg"
+  }
+},
+{
+  "model": "product.productvariant",
+  "pk": 250,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "sku": "918223582",
+    "name": "45",
+    "product": 88,
+    "track_inventory": true,
+    "weight": "2.0:kg"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 4,
+  "fields": {
+    "variant": 193,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 5,
+  "fields": {
+    "variant": 194,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 32,
+  "fields": {
+    "variant": 242,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 33,
+  "fields": {
+    "variant": 243,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 34,
+  "fields": {
+    "variant": 244,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 35,
+  "fields": {
+    "variant": 245,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 36,
+  "fields": {
+    "variant": 246,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 42,
+  "fields": {
+    "variant": 203,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "1.500"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 53,
+  "fields": {
+    "variant": 171,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "15.000",
+    "cost_price_amount": "5.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 54,
+  "fields": {
+    "variant": 172,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "35.000",
+    "cost_price_amount": "10.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 55,
+  "fields": {
+    "variant": 173,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "49.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 73,
+  "fields": {
+    "variant": 198,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "12.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 74,
+  "fields": {
+    "variant": 197,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "20.000",
+    "cost_price_amount": "11.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 85,
+  "fields": {
+    "variant": 204,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "7.000",
+    "cost_price_amount": "2.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 96,
+  "fields": {
+    "variant": 250,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 97,
+  "fields": {
+    "variant": 249,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 98,
+  "fields": {
+    "variant": 191,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "1.500"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 99,
+  "fields": {
+    "variant": 202,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "1.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 101,
+  "fields": {
+    "variant": 248,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "20.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 103,
+  "fields": {
+    "variant": 195,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 104,
+  "fields": {
+    "variant": 196,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 106,
+  "fields": {
+    "variant": 199,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "13.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 107,
+  "fields": {
+    "variant": 192,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "7.000",
+    "cost_price_amount": "2.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 108,
+  "fields": {
+    "variant": 190,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "1.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 111,
+  "fields": {
+    "variant": 247,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "10.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 115,
+  "fields": {
+    "variant": 200,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "5.000",
+    "cost_price_amount": "13.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 116,
+  "fields": {
+    "variant": 174,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "15.000",
+    "cost_price_amount": "5.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 117,
+  "fields": {
+    "variant": 176,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "49.000",
+    "cost_price_amount": "25.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 118,
+  "fields": {
+    "variant": 175,
+    "channel": 1,
+    "currency": "USD",
+    "price_amount": "25.000",
+    "cost_price_amount": "10.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 131,
+  "fields": {
+    "variant": 203,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": "6.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 132,
+  "fields": {
+    "variant": 204,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "28.000",
+    "cost_price_amount": "8.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 133,
+  "fields": {
+    "variant": 202,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": "4.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 162,
+  "fields": {
+    "variant": 198,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": "48.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 163,
+  "fields": {
+    "variant": 197,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "80.000",
+    "cost_price_amount": "44.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 184,
+  "fields": {
+    "variant": 191,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": "6.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 185,
+  "fields": {
+    "variant": 192,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "28.000",
+    "cost_price_amount": "8.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 186,
+  "fields": {
+    "variant": 190,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": "4.000"
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 216,
+  "fields": {
+    "variant": 193,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 218,
+  "fields": {
+    "variant": 196,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "product.productvariantchannellisting",
+  "pk": 219,
+  "fields": {
+    "variant": 195,
+    "channel": 2,
+    "currency": "PLN",
+    "price_amount": "20.000",
+    "cost_price_amount": null
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 1,
+  "fields": {
+    "product": 72,
+    "assignment": 1,
+    "values": [
+      3
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 9,
+  "fields": {
+    "product": 85,
+    "assignment": 4,
+    "values": [
+      72
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 12,
+  "fields": {
+    "product": 71,
+    "assignment": 1,
+    "values": [
+      49
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 19,
+  "fields": {
+    "product": 81,
+    "assignment": 2,
+    "values": [
+      67
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 20,
+  "fields": {
+    "product": 84,
+    "assignment": 3,
+    "values": [
+      69
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 21,
+  "fields": {
+    "product": 83,
+    "assignment": 3,
+    "values": [
+      68
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 27,
+  "fields": {
+    "product": 86,
+    "assignment": 4,
+    "values": [
+      72
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 28,
+  "fields": {
+    "product": 82,
+    "assignment": 2,
+    "values": [
+      67
+    ]
+  }
+},
+{
+  "model": "attribute.assignedproductattribute",
+  "pk": 35,
+  "fields": {
+    "product": 72,
+    "assignment": 8,
+    "values": [
+        94
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 1,
+  "fields": {
+    "variant": 172,
+    "assignment": 3,
+    "values": [
+      61
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 2,
+  "fields": {
+    "variant": 173,
+    "assignment": 3,
+    "values": [
+      62
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 3,
+  "fields": {
+    "variant": 174,
+    "assignment": 3,
+    "values": [
+      60
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 4,
+  "fields": {
+    "variant": 175,
+    "assignment": 3,
+    "values": [
+      61
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 5,
+  "fields": {
+    "variant": 176,
+    "assignment": 3,
+    "values": [
+      62
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 12,
+  "fields": {
+    "variant": 190,
+    "assignment": 2,
+    "values": [
+      46
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 13,
+  "fields": {
+    "variant": 191,
+    "assignment": 2,
+    "values": [
+      47
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 14,
+  "fields": {
+    "variant": 192,
+    "assignment": 2,
+    "values": [
+      48
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 15,
+  "fields": {
+    "variant": 197,
+    "assignment": 5,
+    "values": [
+      70
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 16,
+  "fields": {
+    "variant": 198,
+    "assignment": 5,
+    "values": [
+      71
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 17,
+  "fields": {
+    "variant": 199,
+    "assignment": 5,
+    "values": [
+      70
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 18,
+  "fields": {
+    "variant": 200,
+    "assignment": 5,
+    "values": [
+      71
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 36,
+  "fields": {
+    "variant": 242,
+    "assignment": 6,
+    "values": [
+      75
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 37,
+  "fields": {
+    "variant": 243,
+    "assignment": 6,
+    "values": [
+      76
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 38,
+  "fields": {
+    "variant": 248,
+    "assignment": 6,
+    "values": [
+      77
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 39,
+  "fields": {
+    "variant": 249,
+    "assignment": 6,
+    "values": [
+      76
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 44,
+  "fields": {
+    "variant": 202,
+    "assignment": 2,
+    "values": [
+      46
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 45,
+  "fields": {
+    "variant": 250,
+    "assignment": 6,
+    "values": [
+      81
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 47,
+  "fields": {
+    "variant": 244,
+    "assignment": 6,
+    "values": [
+      77
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 48,
+  "fields": {
+    "variant": 204,
+    "assignment": 2,
+    "values": [
+      48
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 50,
+  "fields": {
+    "variant": 171,
+    "assignment": 3,
+    "values": [
+      60
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 51,
+  "fields": {
+    "variant": 245,
+    "assignment": 6,
+    "values": [
+      78
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 52,
+  "fields": {
+    "variant": 247,
+    "assignment": 6,
+    "values": [
+      76
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 53,
+  "fields": {
+    "variant": 203,
+    "assignment": 2,
+    "values": [
+      47
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 118,
+  "fields": {
+    "variant": 246,
+    "assignment": 6,
+    "values": [
+      79
+    ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 127,
+  "fields": {
+      "variant": 198,
+      "assignment": 9,
+      "values": [
+        97
+      ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 128,
+  "fields": {
+      "variant": 198,
+      "assignment": 10,
+      "values": [
+        98
+      ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 129,
+  "fields": {
+      "variant": 197,
+      "assignment": 9,
+      "values": [
+        100
+      ]
+  }
+},
+{
+  "model": "attribute.assignedvariantattribute",
+  "pk": 130,
+  "fields": {
+      "variant": 197,
+      "assignment": 10,
+      "values": [
+        99
+      ]
+  }
+},
+{
+  "model": "attribute.assignedpageattribute",
+  "pk": 1,
+  "fields": {
+      "page": 1,
+      "assignment": 3,
+      "values": [
+          87
+      ]
+  }
+},
+{
+  "model": "attribute.assignedpageattribute",
+  "pk": 2,
+  "fields": {
+      "page": 1,
+      "assignment": 2,
+      "values": [
+          93
+      ]
+  }
+},
+{
+  "model": "attribute.attributeproduct",
+  "pk": 1,
+  "fields": {
+    "sort_order": null,
+    "attribute": 16,
+    "product_type": 9
+  }
+},
+{
+  "model": "attribute.attributeproduct",
+  "pk": 2,
+  "fields": {
+    "sort_order": null,
+    "attribute": 20,
+    "product_type": 10
+  }
+},
+{
+  "model": "attribute.attributeproduct",
+  "pk": 3,
+  "fields": {
+    "sort_order": null,
+    "attribute": 21,
+    "product_type": 11
+  }
+},
+{
+  "model": "attribute.attributeproduct",
+  "pk": 4,
+  "fields": {
+    "sort_order": null,
+    "attribute": 23,
+    "product_type": 12
+  }
+},
+{
+  "model": "attribute.attributeproduct",
+  "pk": 8,
+  "fields": {
+    "sort_order": null,
+    "attribute": 30,
+    "product_type": 9
+  }
+},
+{
+  "model": "attribute.attributeproduct",
+  "pk": 9,
+  "fields": {
+    "sort_order": null,
+    "attribute": 31,
+    "product_type": 9
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 2,
+  "fields": {
+    "sort_order": null,
+    "attribute": 15,
+    "product_type": 9,
+    "variant_selection": false
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 3,
+  "fields": {
+    "sort_order": null,
+    "attribute": 18,
+    "product_type": 7,
+    "variant_selection": false
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 4,
+  "fields": {
+    "sort_order": null,
+    "attribute": 19,
+    "product_type": 8,
+    "variant_selection": true
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 5,
+  "fields": {
+    "sort_order": null,
+    "attribute": 22,
+    "product_type": 12,
+    "variant_selection": true
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 6,
+  "fields": {
+    "sort_order": null,
+    "attribute": 24,
+    "product_type": 13,
+    "variant_selection": true
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 9,
+  "fields": {
+      "sort_order": null,
+      "attribute": 32,
+      "product_type": 12,
+      "variant_selection": false
+  }
+},
+{
+  "model": "attribute.attributevariant",
+  "pk": 10,
+  "fields": {
+      "sort_order": null,
+      "attribute": 33,
+      "product_type": 12,
+      "variant_selection": false
+  }
+},
+{
+  "model": "attribute.attributepage",
+  "pk": 2,
+  "fields": {
+    "sort_order": null,
+    "attribute": 29,
+    "page_type": 1
+  }
+},
+{
+  "model": "attribute.attributepage",
+  "pk": 3,
+  "fields": {
+    "sort_order": null,
+    "attribute": 27,
+    "page_type": 1
+  }
+},
+{
+  "model": "attribute.attributepage",
+  "pk": 4,
+  "fields": {
+    "sort_order": null,
+    "attribute": 29,
+    "page_type": 2
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 13,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "size",
+    "name": "Size",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 14,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "color",
+    "name": "Color",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 15,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "bottle-size",
+    "name": "Bottle Size",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": true,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 16,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "flavor",
+    "name": "Flavor",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 18,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "bucket-size",
+    "name": "Bucket Size",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 19,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "medium",
+    "name": "Medium",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 20,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "volume",
+    "name": "Volume",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 21,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "abv",
+    "name": "ABV",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 22,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "cushion-size",
+    "name": "Cushion Size",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 23,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "material",
+    "name": "Material",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": true,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 24,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "shoe-size",
+    "name": "Shoe size",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": false,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 25,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "ebook-format",
+    "name": "Format",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": true,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": true,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 26,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "publisher",
+    "name": "Publisher",
+    "type": "product-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": true,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 27,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "author",
+    "name": "Author",
+    "type": "page-type",
+    "input_type": "dropdown",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": true,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 29,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "slug": "tag",
+    "name": "Tag",
+    "type": "page-type",
+    "input_type": "multiselect",
+    "value_required": false,
+    "is_variant_only": false,
+    "visible_in_storefront": true,
+    "filterable_in_storefront": true,
+    "filterable_in_dashboard": true,
+    "storefront_search_position": 0,
+    "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 30,
+  "fields": {
+      "private_metadata": {},
+      "metadata": {},
+      "slug": "details",
+      "name": "Details",
+      "type": "product-type",
+      "input_type": "reference",
+      "entity_type": "Page",
+      "value_required": false,
+      "is_variant_only": false,
+      "visible_in_storefront": true,
+      "filterable_in_storefront": true,
+      "filterable_in_dashboard": true,
+      "storefront_search_position": 0,
+      "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 31,
+  "fields": {
+      "private_metadata": {},
+      "metadata": {},
+      "slug": "related-products",
+      "name": "Related products",
+      "type": "product-type",
+      "input_type": "reference",
+      "entity_type": "Product",
+      "value_required": false,
+      "is_variant_only": false,
+      "visible_in_storefront": true,
+      "filterable_in_storefront": false,
+      "filterable_in_dashboard": false,
+      "storefront_search_position": 0,
+      "available_in_grid": false
+  }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 32,
+  "fields": {
+      "private_metadata": {},
+      "metadata": {},
+      "slug": "length",
+      "name": "Length",
+      "type": "product-type",
+      "input_type": "numeric",
+      "entity_type": null,
+      "unit": "cm",
+      "value_required": false,
+      "is_variant_only": false,
+      "visible_in_storefront": true,
+      "filterable_in_storefront": true,
+      "filterable_in_dashboard": true,
+      "storefront_search_position": 0,
+      "available_in_grid": true
+  }
+},
+{
+    "model": "attribute.attribute",
+    "pk": 33,
+    "fields": {
+        "private_metadata": {},
+        "metadata": {},
+        "slug": "width",
+        "name": "Width",
+        "type": "product-type",
+        "input_type": "numeric",
+        "entity_type": null,
+        "unit": "cm",
+        "value_required": false,
+        "is_variant_only": false,
+        "visible_in_storefront": true,
+        "filterable_in_storefront": true,
+        "filterable_in_dashboard": true,
+        "storefront_search_position": 0,
+        "available_in_grid": true
+    }
+},
+{
+  "model": "attribute.attribute",
+  "pk": 34,
+  "fields": {
+      "private_metadata": {},
+      "metadata": {},
+      "slug": "signed",
+      "name": "Signed",
+      "type": "product-type",
+      "input_type": "boolean",
+      "entity_type": null,
+      "unit": null,
+      "value_required": false,
+      "is_variant_only": false,
+      "visible_in_storefront": true,
+      "filterable_in_storefront": true,
+      "filterable_in_dashboard": true,
+      "storefront_search_position": 0,
+      "available_in_grid": true
+  }
+},
+  {
+  "model": "attribute.attribute",
+  "pk": 35,
+  "fields": {
+      "private_metadata": {},
+      "metadata": {},
+      "slug": "release-date",
+      "name": "Release Date",
+      "type": "product-type",
+      "input_type": "date-time",
+      "entity_type": null,
+      "unit": null,
+      "value_required": false,
+      "is_variant_only": false,
+      "visible_in_storefront": true,
+      "filterable_in_storefront": true,
+      "filterable_in_dashboard": true,
+      "storefront_search_position": 0,
+      "available_in_grid": true
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 1,
+  "fields": {
+    "sort_order": 6,
+    "name": "Pineapple",
+    "value": "",
+    "slug": "pineapple",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 2,
+  "fields": {
+    "sort_order": 7,
+    "name": "Coconut",
+    "value": "",
+    "slug": "coconut",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 3,
+  "fields": {
+    "sort_order": 8,
+    "name": "Apple",
+    "value": "",
+    "slug": "apple",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 36,
+  "fields": {
+    "sort_order": 0,
+    "name": "S",
+    "value": "",
+    "slug": "s",
+    "attribute": 13
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 37,
+  "fields": {
+    "sort_order": 1,
+    "name": "M",
+    "value": "",
+    "slug": "m",
+    "attribute": 13
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 38,
+  "fields": {
+    "sort_order": 2,
+    "name": "L",
+    "value": "",
+    "slug": "l",
+    "attribute": 13
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 39,
+  "fields": {
+    "sort_order": 3,
+    "name": "XL",
+    "value": "",
+    "slug": "xl",
+    "attribute": 13
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 40,
+  "fields": {
+    "sort_order": 4,
+    "name": "XXL",
+    "value": "",
+    "slug": "xxl",
+    "attribute": 13
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 41,
+  "fields": {
+    "sort_order": 0,
+    "name": "White",
+    "value": "",
+    "slug": "white",
+    "attribute": 14
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 42,
+  "fields": {
+    "sort_order": 1,
+    "name": "Blue",
+    "value": "",
+    "slug": "blue",
+    "attribute": 14
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 43,
+  "fields": {
+    "sort_order": 2,
+    "name": "Orange",
+    "value": "",
+    "slug": "orange",
+    "attribute": 14
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 44,
+  "fields": {
+    "sort_order": 3,
+    "name": "Black",
+    "value": "",
+    "slug": "black",
+    "attribute": 14
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 45,
+  "fields": {
+    "sort_order": 4,
+    "name": "Cyan",
+    "value": "",
+    "slug": "cyan",
+    "attribute": 14
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 46,
+  "fields": {
+    "sort_order": 0,
+    "name": "500ml",
+    "value": "",
+    "slug": "500ml",
+    "attribute": 15
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 47,
+  "fields": {
+    "sort_order": 1,
+    "name": "1l",
+    "value": "",
+    "slug": "1l",
+    "attribute": 15
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 48,
+  "fields": {
+    "sort_order": 2,
+    "name": "2l",
+    "value": "",
+    "slug": "2l",
+    "attribute": 15
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 49,
+  "fields": {
+    "sort_order": 0,
+    "name": "Orange",
+    "value": "",
+    "slug": "orange",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 50,
+  "fields": {
+    "sort_order": 1,
+    "name": "Banana",
+    "value": "",
+    "slug": "banana",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 51,
+  "fields": {
+    "sort_order": 2,
+    "name": "Bean",
+    "value": "",
+    "slug": "bean",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 52,
+  "fields": {
+    "sort_order": 3,
+    "name": "Carrot",
+    "value": "",
+    "slug": "carrot",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 53,
+  "fields": {
+    "sort_order": 4,
+    "name": "Sprouty",
+    "value": "",
+    "slug": "sprouty",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 54,
+  "fields": {
+    "sort_order": 5,
+    "name": "Salty, like the tears of your enemy",
+    "value": "",
+    "slug": "salty-like-the-tears-of-your-enemy",
+    "attribute": 16
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 60,
+  "fields": {
+    "sort_order": 0,
+    "name": "1l",
+    "value": "",
+    "slug": "1l",
+    "attribute": 18
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 61,
+  "fields": {
+    "sort_order": 1,
+    "name": "2.5l",
+    "value": "",
+    "slug": "25l",
+    "attribute": 18
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 62,
+  "fields": {
+    "sort_order": 2,
+    "name": "5l",
+    "value": "",
+    "slug": "5l",
+    "attribute": 18
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 63,
+  "fields": {
+    "sort_order": 0,
+    "name": "Vinyl",
+    "value": "",
+    "slug": "vinyl",
+    "attribute": 19
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 64,
+  "fields": {
+    "sort_order": 1,
+    "name": "DVD",
+    "value": "",
+    "slug": "dvd",
+    "attribute": 19
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 65,
+  "fields": {
+    "sort_order": 2,
+    "name": "VHS",
+    "value": "",
+    "slug": "vhs",
+    "attribute": 19
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 66,
+  "fields": {
+    "sort_order": 3,
+    "name": "iTunes",
+    "value": "",
+    "slug": "itunes",
+    "attribute": 19
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 67,
+  "fields": {
+    "sort_order": 0,
+    "name": "700ml",
+    "value": "",
+    "slug": "700ml",
+    "attribute": 20
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 68,
+  "fields": {
+    "sort_order": 0,
+    "name": "5.1%",
+    "value": "",
+    "slug": "51",
+    "attribute": 21
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 69,
+  "fields": {
+    "sort_order": 1,
+    "name": "6.7%",
+    "value": "",
+    "slug": "67",
+    "attribute": 21
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 70,
+  "fields": {
+    "sort_order": 0,
+    "name": "45cm x 45cm",
+    "value": "",
+    "slug": "45cm-x-45cm",
+    "attribute": 22
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 71,
+  "fields": {
+    "sort_order": 1,
+    "name": "55cm x 55cm",
+    "value": "",
+    "slug": "55cm-x-55cm",
+    "attribute": 22
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 72,
+  "fields": {
+    "sort_order": 0,
+    "name": "Cotton",
+    "value": "",
+    "slug": "cotton",
+    "attribute": 23
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 73,
+  "fields": {
+    "sort_order": 1,
+    "name": "Elastane",
+    "value": "",
+    "slug": "elastane",
+    "attribute": 23
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 74,
+  "fields": {
+    "sort_order": 2,
+    "name": "Polyester",
+    "value": "",
+    "slug": "polyester",
+    "attribute": 23
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 75,
+  "fields": {
+    "sort_order": 0,
+    "name": "39",
+    "value": "",
+    "slug": "39",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 76,
+  "fields": {
+    "sort_order": 1,
+    "name": "40",
+    "value": "",
+    "slug": "40",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 77,
+  "fields": {
+    "sort_order": 2,
+    "name": "41",
+    "value": "",
+    "slug": "41",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 78,
+  "fields": {
+    "sort_order": 3,
+    "name": "42",
+    "value": "",
+    "slug": "42",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 79,
+  "fields": {
+    "sort_order": 4,
+    "name": "43",
+    "value": "",
+    "slug": "43",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 80,
+  "fields": {
+    "sort_order": 5,
+    "name": "44",
+    "value": "",
+    "slug": "44",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 81,
+  "fields": {
+    "sort_order": 6,
+    "name": "45",
+    "value": "",
+    "slug": "45",
+    "attribute": 24
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 82,
+  "fields": {
+    "sort_order": 0,
+    "name": "EPUB",
+    "value": "",
+    "slug": "epub",
+    "attribute": 25
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 83,
+  "fields": {
+    "sort_order": 1,
+    "name": "MOBI",
+    "value": "",
+    "slug": "mobi",
+    "attribute": 25
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 84,
+  "fields": {
+    "sort_order": 4,
+    "name": "CD",
+    "value": "",
+    "slug": "cd",
+    "attribute": 19
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 85,
+  "fields": {
+    "sort_order": 5,
+    "name": "MP3",
+    "value": "",
+    "slug": "mp3",
+    "attribute": 19
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 86,
+  "fields": {
+    "sort_order": 0,
+    "name": "Digital Audio",
+    "value": "",
+    "slug": "digital-audio",
+    "attribute": 26
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 87,
+  "fields": {
+    "sort_order": 0,
+    "name": "Suzanne Ellison",
+    "value": "",
+    "slug": "suzanne-ellison",
+    "attribute": 27
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 88,
+  "fields": {
+    "sort_order": 1,
+    "name": "Dennis Perkins",
+    "value": "",
+    "slug": "dennis-perkins",
+    "attribute": 27
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 89,
+  "fields": {
+    "sort_order": 2,
+    "name": "Dylan Lamb",
+    "value": "",
+    "slug": "dylan-lamb",
+    "attribute": 27
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 90,
+  "fields": {
+    "sort_order": 0,
+    "name": "Security",
+    "value": "",
+    "slug": "security",
+    "attribute": 29
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 91,
+  "fields": {
+    "sort_order": 1,
+    "name": "Support",
+    "value": "",
+    "slug": "support",
+    "attribute": 29
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 92,
+  "fields": {
+    "sort_order": 2,
+    "name": "Medical",
+    "value": "",
+    "slug": "medical",
+    "attribute": 29
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 93,
+  "fields": {
+    "sort_order": 3,
+    "name": "General",
+    "value": "",
+    "slug": "general",
+    "attribute": 29
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 94,
+  "fields": {
+      "sort_order": 0,
+      "name": "Apple juice details",
+      "value": "",
+      "slug": "72_2",
+      "file_url": null,
+      "content_type": null,
+      "attribute": 30
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 95,
+  "fields": {
+      "sort_order": 0,
+      "name": "Bean Juice",
+      "value": "",
+      "slug": "74_79",
+      "file_url": null,
+      "content_type": null,
+      "attribute": 31
+  }
+},
+{
+    "model": "attribute.attributevalue",
+    "pk": 96,
+    "fields": {
+        "sort_order": 1,
+        "name": "Carrot Juice",
+        "value": "",
+        "slug": "74_73",
+        "file_url": null,
+        "content_type": null,
+        "attribute": 31
+    }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 97,
+  "fields": {
+      "sort_order": 0,
+      "name": "55",
+      "value": "",
+      "slug": "55",
+      "file_url": null,
+      "content_type": null,
+      "attribute": 32
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 98,
+  "fields": {
+      "sort_order": 0,
+      "name": "55",
+      "value": "",
+      "slug": "55",
+      "file_url": null,
+      "content_type": null,
+      "attribute": 33
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 99,
+  "fields": {
+      "sort_order": 1,
+      "name": "45",
+      "value": "",
+      "slug": "45",
+      "file_url": null,
+      "content_type": null,
+      "attribute": 33
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 100,
+  "fields": {
+      "sort_order": 1,
+      "name": "45",
+      "value": "",
+      "slug": "45",
+      "file_url": null,
+      "content_type": null,
+      "attribute": 32
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 101,
+  "fields": {
+      "sort_order": 1,
+      "name": "Signed: Yes",
+      "value": "",
+      "slug": "34_true",
+      "file_url": null,
+      "content_type": null,
+      "boolean": true,
+      "attribute": 34
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 102,
+  "fields": {
+      "sort_order": 1,
+      "name": "Signed: No",
+      "value": "",
+      "slug": "34_false",
+      "file_url": null,
+      "content_type": null,
+      "boolean": false,
+      "attribute": 34
+  }
+},
+  {
+  "model": "attribute.attributevalue",
+  "pk": 103,
+  "fields": {
+      "sort_order": 1,
+      "name": "2021-06-03 00:15:00+00:00",
+      "value": "",
+      "slug": "320_35",
+      "file_url": null,
+      "content_type": null,
+      "boolean": true,
+      "date_time": "2021-06-03 00:15:00+00:00",
+      "attribute": 35
+  }
+},
+{
+  "model": "attribute.attributevalue",
+  "pk": 104,
+  "fields": {
+      "sort_order": 2,
+      "name": "2021-06-01 14:15:00+00:00",
+      "value": "",
+      "slug": "317_35",
+      "file_url": null,
+      "content_type": null,
+      "boolean": false,
+      "date_time": "2021-06-01 14:15:00+00:00",
+      "attribute": 35
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 1,
+  "fields": {
+    "sort_order": 0,
+    "product": 61,
+    "image": "products/sau-rieng-ri6-01.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 2,
+  "fields": {
+    "sort_order": 1,
+    "product": 61,
+    "image": "products/sau-rieng-ri6-02.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 3,
+  "fields": {
+    "sort_order": 2,
+    "product": 61,
+    "image": "products/sau-rieng-ri6-03.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 4,
+  "fields": {
+    "sort_order": 3,
+    "product": 61,
+    "image": "products/sau-rieng-ri6-04.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 5,
+  "fields": {
+    "sort_order": 4,
+    "product": 61,
+    "image": "products/sau-rieng-ri6-05.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 6,
+  "fields": {
+    "sort_order": 0,
+    "product": 71,
+    "image": "products/buoi-da-xanh-01.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 7,
+  "fields": {
+    "sort_order": 1,
+    "product": 71,
+    "image": "products/buoi-da-xanh-02.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 8,
+  "fields": {
+    "sort_order": 2,
+    "product": 71,
+    "image": "products/buoi-da-xanh-03.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 9,
+  "fields": {
+    "sort_order": 3,
+    "product": 71,
+    "image": "products/buoi-da-xanh-04.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 10,
+  "fields": {
+    "sort_order": 4,
+    "product": 71,
+    "image": "products/buoi-da-xanh-05.jpg",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 7,
+  "fields": {
+    "sort_order": 0,
+    "product": 71,
+    "image": "products/saleordemoproduct_fd_juice_06_qlQMYR4.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 14,
+  "fields": {
+    "sort_order": 0,
+    "product": 72,
+    "image": "products/saleordemoproduct_fd_juice_06_qlQMYR4.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 15,
+  "fields": {
+    "sort_order": 0,
+    "product": 81,
+    "image": "products/saleordemoproduct_wine-red_RwMpetZ.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 16,
+  "fields": {
+    "sort_order": 0,
+    "product": 82,
+    "image": "products/saleordemoproduct_wine-white_IjVbGgP.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 17,
+  "fields": {
+    "sort_order": 0,
+    "product": 83,
+    "image": "products/saleordemoproduct_beer-02_1_EyUYsrO.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 18,
+  "fields": {
+    "sort_order": 1,
+    "product": 83,
+    "image": "products/saleordemoproduct_beer-02_2_ny6SSDd.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 19,
+  "fields": {
+    "sort_order": 0,
+    "product": 84,
+    "image": "products/saleordemoproduct_beer-01_1_XKxUA4p.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 20,
+  "fields": {
+    "sort_order": 1,
+    "product": 84,
+    "image": "products/saleordemoproduct_beer-01_2_S9ZTZC3.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 21,
+  "fields": {
+    "sort_order": 0,
+    "product": 85,
+    "image": "products/saleordemoproduct_cuschion01_RFwkul6.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 22,
+  "fields": {
+    "sort_order": 0,
+    "product": 86,
+    "image": "products/saleordemoproduct_cuschion02_fymteSB.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 23,
+  "fields": {
+    "sort_order": 0,
+    "product": 87,
+    "image": "products/saleordemoproduct_sneakers_01_1_x1wWUh7.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 24,
+  "fields": {
+    "sort_order": 1,
+    "product": 87,
+    "image": "products/saleordemoproduct_sneakers_01_2_CGpkPtV.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 25,
+  "fields": {
+    "sort_order": 2,
+    "product": 87,
+    "image": "products/saleordemoproduct_sneakers_01_3_uMkuTyn.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 26,
+  "fields": {
+    "sort_order": 3,
+    "product": 87,
+    "image": "products/saleordemoproduct_sneakers_01_4_kJEkjkV.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 27,
+  "fields": {
+    "sort_order": 0,
+    "product": 88,
+    "image": "products/saleordemoproduct_sneakers_02_1_tcq61PA.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 28,
+  "fields": {
+    "sort_order": 1,
+    "product": 88,
+    "image": "products/saleordemoproduct_sneakers_02_2_MGWF49Y.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 29,
+  "fields": {
+    "sort_order": 2,
+    "product": 88,
+    "image": "products/saleordemoproduct_sneakers_02_3_1epAGZH.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.productimage",
+  "pk": 30,
+  "fields": {
+    "sort_order": 3,
+    "product": 88,
+    "image": "products/saleordemoproduct_sneakers_02_4_fcNUWNH.png",
+    "ppoi": "0.5x0.5",
+    "alt": ""
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 2,
+  "fields": {
+    "sort_order": null,
+    "collection": 1,
+    "product": 83
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 4,
+  "fields": {
+    "sort_order": null,
+    "collection": 1,
+    "product": 86
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 5,
+  "fields": {
+    "sort_order": null,
+    "collection": 2,
+    "product": 83
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 6,
+  "fields": {
+    "sort_order": null,
+    "collection": 2,
+    "product": 84
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 7,
+  "fields": {
+    "sort_order": null,
+    "collection": 2,
+    "product": 61
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 5,
+  "fields": {
+    "sort_order": null,
+    "collection": 3,
+    "product": 83
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 6,
+  "fields": {
+    "sort_order": null,
+    "collection": 3,
+    "product": 84
+  }
+},
+{
+  "model": "product.collectionproduct",
+  "pk": 7,
+  "fields": {
+    "sort_order": null,
+    "collection": 3,
+    "product": 61
+  }
+},
+{
+  "model": "product.collection",
+  "pk": 1,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": null,
+    "seo_description": null,
+    "name": "Trái cây khuyến mãi",
+    "slug": "trai-cay-khuyen-mai",
+    "background_image": "collection-backgrounds/summer_F5A4bVb.jpg",
+    "background_image_alt": "",
+    "description": {
+      "blocks": [{
+          "data": {
+              "text": "The Saleor Summer Collection features a range of products that feel the heat of the market. A demo store for all seasons. Saleor captures the open source, e-commerce sun."
+          },
+          "type": "paragraph"
+      }]
+    }
+  }
+},
+{
+  "model": "product.collection",
+  "pk": 2,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": null,
+    "seo_description": null,
+    "name": "Trái cây bốn mùa",
+    "slug": "trai-cay-bon-mua",
+    "background_image": "collection-backgrounds/clothing_R7nkNxS.jpg",
+    "background_image_alt": "",
+    "description": {
+      "blocks": [{
+          "data": {
+              "text": "The Saleor Winter Sale is snowed under with seasonal offers. Unreal products at unreal prices. Literally, they are not real products, but the Saleor demo store is a genuine e-commerce leader."
+          },
+          "type": "paragraph"
+      }]
+    }
+  }
+},
+{
+  "model": "product.collection",
+  "pk": 3,
+  "fields": {
+    "private_metadata": {},
+    "metadata": {},
+    "seo_title": null,
+    "seo_description": null,
+    "name": "Trái cây đặc sản",
+    "slug": "trai-cay-dac-san",
+    "background_image": "collection-backgrounds/clothing_R7nkNxS.jpg",
+    "background_image_alt": "",
+    "description": {
+      "blocks": [{
+        "key": "",
+        "data": {},
+        "text": "Featured Products. Literally, they are not real products, but the Saleor demo store is a genuine e-commerce leader.",
+        "type": "unstyled",
+        "depth": 0,
+        "entityRanges": [],
+        "inlineStyleRanges": []
+      }],
+      "entityMap": {}
+    }
+  }
+},
+{
+  "model": "product.collectionchannellisting",
+  "pk": 1,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "collection": 1,
+    "channel": 1
+  }
+},
+{
+  "model": "product.collectionchannellisting",
+  "pk": 2,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "collection": 2,
+    "channel": 1
+  }
+},
+{
+  "model": "product.collectionchannellisting",
+  "pk": 3,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "collection": 1,
+    "channel": 2
+  }
+},
+{
+  "model": "product.collectionchannellisting",
+  "pk": 4,
+  "fields": {
+    "publication_date": null,
+    "is_published": false,
+    "collection": 2,
+    "channel": 2
+  }
+},
+{
+  "model": "product.collectionchannellisting",
+  "pk": 5,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "collection": 3,
+    "channel": 1
+  }
+},
+{
+  "model": "product.collectionchannellisting",
+  "pk": 6,
+  "fields": {
+    "publication_date": "2020-01-01",
+    "is_published": true,
+    "collection": 3,
+    "channel": 2
+  }
+}
+]

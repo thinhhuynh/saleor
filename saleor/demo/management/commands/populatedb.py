@@ -2,6 +2,7 @@ from django.conf import settings
 
 from ....channel.models import Channel
 from ....core.management.commands.populatedb import Command as PopulateDBCommand
+from ....core.management.commands.populatedb_weenfruit import Command as PopulateDBWeenFruitCommand
 from ....payment.gateways.braintree.plugin import BraintreeGatewayPlugin
 from ....plugins.manager import get_plugins_manager
 
@@ -33,7 +34,7 @@ def configure_braintree():
     return True
 
 
-class Command(PopulateDBCommand):
+class Command(PopulateDBCommand, PopulateDBWeenFruitCommand):
     def handle(self, *args, **options):
         super().handle(*args, **options)
         is_configured = configure_braintree()
