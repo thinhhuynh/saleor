@@ -252,6 +252,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.postgres",
     "django_celery_beat",
+    "django_extensions",
     # Local apps
     "saleor.permission",
     "saleor.auth",

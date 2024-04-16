@@ -52,7 +52,8 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.RunPython(
-            migrate_content_json_into_content_field,
+            # TODO need to fix migration data
+            # migrate_content_json_into_content_field,
             migrations.RunPython.noop,
         ),
     ]
