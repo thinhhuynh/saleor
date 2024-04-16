@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Saleor",
+            "name": "WeenSpace API",
             "type": "python",
             "request": "launch",
             "module": "uvicorn",
@@ -15,7 +15,7 @@
             ]
         },
         {
-            "name": "Celery (worker)",
+            "name": "WeenSpace Celery (worker)",
             "type": "python",
             "request": "launch",
             "module": "celery",

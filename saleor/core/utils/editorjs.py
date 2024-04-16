@@ -40,6 +40,7 @@ def clean_editor_js(definitions, *, to_string=False) -> Union[dict, str, None]:
     if definitions is None:
         return "" if to_string else definitions
 
+    print('definition....', definitions)
     blocks = definitions.get("blocks")
 
     if not blocks or not isinstance(blocks, list):

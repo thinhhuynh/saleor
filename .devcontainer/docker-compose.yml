@@ -1,8 +1,8 @@
-version: "3.4"
+version: "3.9"
 
 services:
-  saleor:
-    image: saleor
+  weenspace-api:
+    image: weenspace
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
@@ -11,41 +11,51 @@ services:
       - common.env
       - backend.env
     depends_on:
-      - db
+      - weenspace-postgres
       - redis
+    environment:
+      - DASHBOARD_URL=http://localhost:9000/
+      - ALLOWED_HOSTS=localhost,weenspace-api,weenspace-admin
     volumes:
       - ..:/app
+    ports:
+      - 8008:8000
 
-  dashboard:
-    image: ghcr.io/saleor/saleor-dashboard:3.15.2
+  weenspace-admin:
+    image: ghcr.io/saleor/saleor-dashboard:3.19.5
     restart: unless-stopped
     ports:
       - 9000:80
 
-  db:
-    image: library/postgres:13-alpine
+  weenspace-postgres:
+    image: postgres:16.2-alpine
     restart: unless-stopped
     volumes:
-      - saleor-db:/var/lib/postgresql/data
+      - weenspace-db:/var/lib/postgresql/data
     environment:
-      - POSTGRES_USER=saleor
-      - POSTGRES_PASSWORD=saleor
+      POSTGRES_USER: ${POSTGRES_USER:-weenspace}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-weenspace}
+      POSTGRES_HOST: ${POSTGRES_HOST:-weenspace-postgres}
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      POSTGRES_INITIAL_DBS: ${POSTGRES_DB:-weenspace_dev}
+    ports:
+      - 5432:5432
 
   redis:
-    image: library/redis:7.0-alpine
+    image: redis:7.2.4-alpine
     restart: unless-stopped
     volumes:
-      - saleor-redis:/data
+      - weenspace-redis:/data
 
   mailpit:
-    image: axllent/mailpit
+    image: axllent/mailpit:v1.15.1
     ports:
       - "1025" # SMTP Server
       - "8025" # Mailpit UI
     restart: unless-stopped
 
 volumes:
-  saleor-db:
+  weenspace-db:
     driver: local
-  saleor-redis:
+  weenspace-redis:
     driver: local

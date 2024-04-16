@@ -1,7 +1,7 @@
 {
-  "name": "Saleor",
+  "name": "WeenSpace Docker",
   "dockerComposeFile": "docker-compose.yml",
-  "service": "saleor",
+  "service": "weenspace",
   "workspaceFolder": "/app",
   "forwardPorts": [
     8000,
@@ -10,10 +10,10 @@
   ],
   "portsAttributes": {
     "8000": {
-        "label": "Saleor Core"
+        "label": "WeenSpace Core"
     },
     "dashboard:9000": {
-        "label": "Saleor Dashboard"
+        "label": "WeenSpace Admin"
     },
     "mailpit:8025": {
       "label": "Mailpit UI"

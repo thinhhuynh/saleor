@@ -1,5 +1,5 @@
 ### Build and install packages
-FROM python:3.9 as build-python
+FROM python:3.11.2 as build-python
 
 RUN apt-get -y update \
   && apt-get install -y gettext \
@@ -9,13 +9,13 @@ RUN apt-get -y update \
 
 # Install Python dependencies
 WORKDIR /app
-RUN --mount=type=cache,mode=0755,target=/root/.cache/pip pip install poetry==1.7.0
+RUN --mount=type=cache,mode=0755,target=/root/.cache/pip pip install poetry==1.8.2
 RUN poetry config virtualenvs.create false
 COPY poetry.lock pyproject.toml /app/
 RUN --mount=type=cache,mode=0755,target=/root/.cache/pypoetry poetry install --no-root
 
 ### Final image
-FROM python:3.9-slim
+FROM python:3.11.2-slim
 
 RUN groupadd -r saleor && useradd -r -g saleor saleor
 

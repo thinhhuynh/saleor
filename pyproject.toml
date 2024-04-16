@@ -3,18 +3,18 @@ requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "saleor"
-version = "3.20.0-a.0"
+name = "weenspace"
+version = "1.0.0"
 description = "A modular, high performance, headless e-commerce platform built with Python, GraphQL, Django, and React."
-authors = [ "Saleor Commerce <hello@saleor.io>" ]
+authors = [ "WeenSpace <thinh@weenspace.com>" ]
 license = "BSD-3-Clause"
 readme = "README.md"
-homepage = "https://saleor.io/"
-repository = "https://github.com/saleor/saleor"
-documentation = "https://docs.saleor.io/"
+homepage = "https://weenspace.com/"
+repository = "https://github.com/weenspace/weenspace"
+documentation = "https://docs.weenspace.com/"
 
   [tool.poetry.dependencies]
-  python = "~3.9"
+  python = "~3.11.2"
   Adyen = "^4.0.0"
   aniso8601 = "^7.0.0"
   asgiref = "^3.7.2"
@@ -30,7 +30,7 @@ documentation = "https://docs.saleor.io/"
   cryptography = "^42.0.5"
   dj-database-url = "^2"
   dj-email-url = "^1"
-  django = {version = "^3.2.24", extras = ["bcrypt"]}
+  django = "4.2.11"
   django-cache-url = "^3.1.2"
   django-celery-beat = "^2.2.1"
   django-countries = "^7.2"
@@ -66,7 +66,7 @@ documentation = "https://docs.saleor.io/"
   posuto = "^2023.2.0"
   prices = "^1.0"
   promise = "^2.3"
-  psycopg2 = "^2.8.3"
+  psycopg = {extras = ["binary", "pool"], version = "3.1.18"}
   pybars3 = "^0.9.7"
   pyjwt = "2.5.0" # Version 2.6.0 changed iat validation which causes tests to fail: https://github.com/saleor/saleor/issues/11047
   python-dateutil = "^2.8.2"
@@ -158,13 +158,14 @@ extend_exclude = ["conftest\\.py", ".*/conftest\\.py", ".*/tests/.*"]
   DEP004 = ["debug_toolbar", "graphiql_debug_toolbar"]
 
 [tool.ruff]
+
 lint.extend-select = ["D", "I", "ISC002", "PIE", "PT", "T20", "UP"]
 lint.ignore = ["D100", "D101", "D102", "D103", "D104", "D105", "D106", "D107", "D202", "D203", "D206", "D213", "D407", "PT019"]
-target-version = "py39"
+target-version = ["py311","py312"]
 
   [tool.ruff.lint.flake8-pytest-style]
   fixture-parentheses = false
   mark-parentheses = false
 
   [tool.ruff.lint.isort]
-  known-first-party = ["saleor"]
+  known-first-party = ["weenspace"]
