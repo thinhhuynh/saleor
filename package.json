@@ -1,5 +1,5 @@
 {
-  "name": "saleor",
+  "name": "weenspace",
   "version": "3.20.0-a.0",
   "engines": {
     "node": ">=16 <17",
@@ -7,20 +7,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/saleor/saleor.git"
+    "url": "git://github.com/WeenSpace/weenspace.git"
   },
-  "author": "Saleor Commerce",
-  "license": "BSD-3-Clause",
+  "author": "WeenSpace Platform",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/saleor/saleor/issues"
+    "url": "https://github.com/WeenSppace/weenspace/issues"
   },
-  "homepage": "http://saleor.io/",
+  "homepage": "http://weenspace.com/",
   "devDependencies": {
     "@release-it/bumper": "^4.0.0",
     "release-it": "^15.6.0"
   },
   "scripts": {
-    "build-schema": "python manage.py get_graphql_schema > saleor/graphql/schema.graphql",
+    "build-schema": "python manage.py get_graphql_schema > weenspace/graphql/schema.graphql",
     "release": "release-it"
   }
 }

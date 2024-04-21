@@ -17,7 +17,7 @@ RUN --mount=type=cache,mode=0755,target=/root/.cache/pypoetry poetry install --n
 ### Final image
 FROM python:3.11.2-slim
 
-RUN groupadd -r saleor && useradd -r -g saleor saleor
+RUN groupadd -r weenspace && useradd -r -g weenspace weenspace
 
 RUN apt-get update \
   && apt-get install -y \
@@ -41,7 +41,7 @@ RUN echo 'image/webp webp' >> /etc/mime.types
 RUN echo 'image/avif avif' >> /etc/mime.types
 
 RUN mkdir -p /app/media /app/static \
-  && chown -R saleor:saleor /app/
+  && chown -R weenspace:weenspace /app/
 
 COPY --from=build-python /usr/local/lib/python3.9/site-packages/ /usr/local/lib/python3.9/site-packages/
 COPY --from=build-python /usr/local/bin/ /usr/local/bin/
@@ -55,13 +55,13 @@ RUN SECRET_KEY=dummy STATIC_URL=${STATIC_URL} python3 manage.py collectstatic --
 EXPOSE 8000
 ENV PYTHONUNBUFFERED 1
 
-LABEL org.opencontainers.image.title="saleor/saleor"                                  \
+LABEL org.opencontainers.image.title="weenspace/weenspace"                                  \
       org.opencontainers.image.description="\
 A modular, high performance, headless e-commerce platform built with Python, \
 GraphQL, Django, and ReactJS."                                                         \
-      org.opencontainers.image.url="https://saleor.io/"                                \
-      org.opencontainers.image.source="https://github.com/saleor/saleor"               \
-      org.opencontainers.image.authors="Saleor Commerce (https://saleor.io)"           \
-      org.opencontainers.image.licenses="BSD 3"
+      org.opencontainers.image.url="https://weenspace.com/"                                \
+      org.opencontainers.image.source="https://github.com/WeenSpace/weenspace"               \
+      org.opencontainers.image.authors="weenspace Platform (https://weenspace.io)"           \
+      org.opencontainers.image.licenses="MIT"
 
-CMD ["gunicorn", "--bind", ":8000", "--workers", "4", "--worker-class", "saleor.asgi.gunicorn_worker.UvicornWorker", "saleor.asgi:application"]
+CMD ["gunicorn", "--bind", ":8000", "--workers", "4", "--worker-class", "weenspace.asgi.gunicorn_worker.UvicornWorker", "weenspace.asgi:application"]

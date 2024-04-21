@@ -13,4 +13,4 @@ jobs:
 
       - uses: kamilkisiela/graphql-inspector@v3.4.0
         with:
-          schema: "main:saleor/graphql/schema.graphql"
+          schema: "main:weenspace/graphql/schema.graphql"

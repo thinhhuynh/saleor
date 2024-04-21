@@ -54,7 +54,7 @@ jobs:
 
       - name: Migrate
         run: |
-          export DJANGO_SETTINGS_MODULE=saleor.tests.settings
+          export DJANGO_SETTINGS_MODULE=weenspace.tests.settings
           python -m poetry run python manage.py migrate
 
       - name: Checkout base

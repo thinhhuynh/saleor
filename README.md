@@ -19,19 +19,19 @@
 
 <div align="center">
   Join our community: <br>
-  <a href="https://saleor.io/">Website</a>
+  <a href="https://weenspace.com/">Website</a>
   <span> | </span>
   <a href="https://twitter.com/getsaleor">Twitter</a>
   <span> | </span>
-  <a href="https://github.com/saleor/saleor/discussions">GitHub Discussions</a>
+  <a href="https://github.com/WeenSpace/weenspace/discussions">GitHub Discussions</a>
   <span> | </span>
   <a href="https://discord.gg/H52JTZAtSH">Discord</a>
 </div>
 
 <div align="center">
-   <a href="https://saleor.io/blog">Blog</a>
+   <a href="https://weenspace.com/blog">Blog</a>
   <span> | </span>
-  <a href="https://saleor.typeform.com/to/JTJK0Nou">Subscribe to newsletter</a>
+  <a href="https://weenspace.typeform.com/to/JTJK0Nou">Subscribe to newsletter</a>
 </div>
 
 <br>
@@ -40,8 +40,8 @@
   <a href="http://codecov.io/github/saleor/saleor?branch=master">
     <img src="http://codecov.io/github/saleor/saleor/coverage.svg?branch=master" alt="Codecov" />
   </a>
-  <a href="https://docs.saleor.io/">
-    <img src="https://img.shields.io/badge/docs-docs.saleor.io-brightgreen.svg" alt="Documentation" />
+  <a href="https://docs.weenspace.com/">
+    <img src="https://img.shields.io/badge/docs-docs.weenspace.com-brightgreen.svg" alt="Documentation" />
   </a>
   <a href="https://github.com/python/black">
     <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black">
@@ -50,13 +50,20 @@
 
 ## Table of Contents
 
+- [Table of Contents](#table-of-contents)
 - [What makes Saleor special?](#what-makes-saleor-special)
+- [Why API-only Architecture?](#why-api-only-architecture)
+  - [What are the tradeoffs?](#what-are-the-tradeoffs)
 - [Features](#features)
 - [Installation](#installation)
+  - [Saleor Cloud](#saleor-cloud)
 - [Documentation](#documentation)
+- [Saleor Platform](#saleor-platform)
+- [Storefront](#storefront)
+- [Dashboard](#dashboard)
 - [Contributing](#contributing)
-- [Your feedback](#your-feedback)
 - [License](#license)
+    - [Crafted with ❤️ by Saleor Commerce](#crafted-with-️-by-saleor-commerce)
 
 ## What makes Saleor special?
 
@@ -70,12 +77,12 @@
 
 - **Cloud native** - battle tested on global brands.
 
-- **Native-multichannel** - Per [channel](https://docs.saleor.io/docs/3.x/developer/channels) control of pricing, currencies, stock, product, and more.
+- **Native-multichannel** - Per [channel](https://docs.weenspace.com/docs/3.x/developer/channels) control of pricing, currencies, stock, product, and more.
 
 
 ## Why API-only Architecture?
 
-Saleor's API-first extensibility provides powerful tools for developers to extend backend using [webhooks](https://docs.saleor.io/docs/3.x/developer/extending/webhooks/overview), attributes, [metadata](https://docs.saleor.io/docs/3.x/api-usage/metadata), [apps](https://docs.saleor.io/docs/3.x/developer/extending/apps/overview), [subscription queries](https://docs.saleor.io/docs/3.x/developer/extending/webhooks/subscription-webhook-payloads), [API extensions](https://docs.saleor.io/docs/3.x/developer/extending/webhooks/synchronous-events/overview), [dashboard iframes](https://docs.saleor.io/docs/3.x/developer/extending/apps/overview).
+Saleor's API-first extensibility provides powerful tools for developers to extend backend using [webhooks](https://docs.weenspace.com/docs/3.x/developer/extending/webhooks/overview), attributes, [metadata](https://docs.weenspace.com/docs/3.x/api-usage/metadata), [apps](https://docs.weenspace.com/docs/3.x/developer/extending/apps/overview), [subscription queries](https://docs.weenspace.com/docs/3.x/developer/extending/webhooks/subscription-webhook-payloads), [API extensions](https://docs.weenspace.com/docs/3.x/developer/extending/webhooks/synchronous-events/overview), [dashboard iframes](https://docs.weenspace.com/docs/3.x/developer/extending/apps/overview).
 
 Compared to traditional plugin architectures (monoliths) it provides the following benefits:
 
@@ -95,7 +102,7 @@ you need to collaborate with other developers, or you have non-trivial requireme
 
 ## Features
 - **Enterprise ready**: Secure, scalable, and stable. Battle-tested by big brands
-- **Dashboard**: User-friendly, fast, and productive. (Decoupled project [repo](https://github.com/saleor/saleor-dashboard) )
+- **Dashboard**: User-friendly, fast, and productive. (Decoupled project [repo](https://github.com/WeenSpace/weenspace-dashboard) )
 - **Global by design** Multi-currency, multi-language, multi-warehouse, tutti multi!
 - **CMS**: Manage product or marketing content.
 - **Product management**: A rich content model for large and complex catalogs.
@@ -114,68 +121,68 @@ you need to collaborate with other developers, or you have non-trivial requireme
 
 ## Installation
 
-[See the Saleor docs](https://docs.saleor.io/docs/3.x/developer/installation) for step-by-step installation and deployment instructions.
+[See the Saleor docs](https://docs.weenspace.com/docs/3.x/developer/installation) for step-by-step installation and deployment instructions.
 
 Note:
-The `main` branch is the development version of Saleor and it may be unstable. To use the latest stable version, download it from the [Releases](https://github.com/saleor/saleor/releases/) page or switch to a release tag.
+The `main` branch is the development version of Saleor and it may be unstable. To use the latest stable version, download it from the [Releases](https://github.com/WeenSpace/weenspace/releases/) page or switch to a release tag.
 
 The current production-ready version is 3.x and you should use this version for all three components:
 
-- Saleor: https://github.com/saleor/saleor/releases/
-- Dashboard: https://github.com/saleor/saleor-dashboard/releases/
-- Storefront: https://github.com/saleor/react-storefront/releases/
+- Saleor: https://github.com/WeenSpace/weenspace/releases/
+- Dashboard: https://github.com/WeenSpace/weenspace-dashboard/releases/
+- Storefront: https://github.com/WeenSpace/react-storefront/releases/
 
 ### Saleor Cloud
-The fastest way to develop with Saleor is by using developer accounts in [Saleor Cloud](https://cloud.saleor.io).
+The fastest way to develop with Saleor is by using developer accounts in [Saleor Cloud](https://cloud.weenspace.com).
 
-Register [here](https://cloud.saleor.io/register) or install our [CLI tool](https://github.com/saleor/saleor-cli):
+Register [here](https://cloud.weenspace.com/register) or install our [CLI tool](https://github.com/WeenSpace/weenspace-cli):
 
-`npm i -g @saleor/cli`
+`npm i -g @weenspace/cli`
 
 and run the following command:
 
 `saleor register`
 
-Bootstrap your first [storefront](https://github.com/saleor/react-storefront) with:
+Bootstrap your first [storefront](https://github.com/WeenSpace/react-storefront) with:
 
 `saleor storefront create --url {your-saleor-graphql-endpoint}`
 
 ## Documentation
 
-Saleor documentation is available here: [docs.saleor.io](https://docs.saleor.io)
+Saleor documentation is available here: [docs.weenspace.com](https://docs.weenspace.com)
 
-To contribute, please see the [`saleor/saleor-docs` repository](https://github.com/saleor/saleor-docs/).
+To contribute, please see the [`saleor/saleor-docs` repository](https://github.com/WeenSpace/weenspace-docs/).
 
 ## Saleor Platform
 
-The easiest way to run all components of Saleor (API, storefront, and dashboard) together on your local machine is to use the [saleor-platform](https://github.com/saleor/saleor-platform) project. Go to that repository for instructions on how to use it.
+The easiest way to run all components of Saleor (API, storefront, and dashboard) together on your local machine is to use the [saleor-platform](https://github.com/WeenSpace/weenspace-platform) project. Go to that repository for instructions on how to use it.
 
-[View saleor-platform](https://github.com/saleor/saleor-platform)
+[View saleor-platform](https://github.com/WeenSpace/weenspace-platform)
 
 ## Storefront
 
 An open-source storefront example built with Next.js App Router, React.js, TypeScript, GraphQL, and Tailwind CSS.
 
-[React Storefront Repository](https://github.com/saleor/storefront)
+[React Storefront Repository](https://github.com/WeenSpace/storefront)
 
-[View Storefront Example](https://storefront.saleor.io/)
+[View Storefront Example](https://storefront.weenspace.com/)
 
 ## Dashboard
 
-For the dashboard, go to the [saleor-dashboard](https://github.com/saleor/saleor-dashboard) repository.
+For the dashboard, go to the [saleor-dashboard](https://github.com/WeenSpace/weenspace-dashboard) repository.
 
 ## Contributing
 
-We love your contributions and do our best to provide you with mentorship and support. If you are looking for an issue to tackle, take a look at issues labeled [`Good first issue`](https://github.com/saleor/saleor/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22+)
+We love your contributions and do our best to provide you with mentorship and support. If you are looking for an issue to tackle, take a look at issues labeled [`Good first issue`](https://github.com/WeenSpace/weenspace/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22+)
 
-If nothing grabs your attention, check [our roadmap](https://github.com/orgs/saleor/projects/3/views/4) or come up with your feature. Just drop us a line or [open an issue](https://github.com/saleor/saleor/issues/new) and we’ll work out how to handle it.
+If nothing grabs your attention, check [our roadmap](https://github.com/orgs/saleor/projects/3/views/4) or come up with your feature. Just drop us a line or [open an issue](https://github.com/WeenSpace/weenspace/issues/new) and we’ll work out how to handle it.
 
-Get more details in our [Contributing Guide](https://docs.saleor.io/docs/developer/community/contributing).
+Get more details in our [Contributing Guide](https://docs.weenspace.com/docs/developer/community/contributing).
 
 ## License
 
-Disclaimer: Everything you see here is open and free to use as long as you comply with the [license](https://github.com/saleor/saleor/blob/master/LICENSE). There are no hidden charges. We promise to do our best to fix bugs and improve the code.
+Disclaimer: Everything you see here is open and free to use as long as you comply with the [license](https://github.com/WeenSpace/weenspace/blob/master/LICENSE). There are no hidden charges. We promise to do our best to fix bugs and improve the code.
 
-#### Crafted with ❤️ by [Saleor Commerce](https://saleor.io)
+#### Crafted with ❤️ by [Saleor Commerce](https://weenspace.com)
 
-hello@saleor.io
+hello@weenspace.com

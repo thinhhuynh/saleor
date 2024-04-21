@@ -10,7 +10,7 @@
             "request": "launch",
             "module": "uvicorn",
             "args": [
-                "saleor.asgi:application",
+                "weenspace.asgi:application",
                 "--lifespan=off"
             ]
         },
@@ -20,7 +20,7 @@
             "request": "launch",
             "module": "celery",
             "args": [
-                "--app=saleor.celeryconf:app",
+                "--app=weenspace.celeryconf:app",
                 "worker",
                 "--beat"
             ]

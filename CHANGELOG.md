@@ -1,7 +1,7 @@
 
 # Changelog
 
-All notable, unreleased changes to this project will be documented in this file. For the released changes, please visit the [Releases](https://github.com/saleor/saleor/releases) page.
+All notable, unreleased changes to this project will be documented in this file. For the released changes, please visit the [Releases](https://github.com/WeenSpace/weenspace/releases) page.
 
 # 3.20.0 [Unreleased]
 
@@ -257,7 +257,7 @@ All notable, unreleased changes to this project will be documented in this file.
 - Add API for tokenizing payment methods - #13879 by @korycins
 
 - Deprecate the `NOTIFY_USER` webhook and the `externalNotificationTrigger` mutation - #13881 by @maarcingebala
-  - See the docs for more details about migrating from the `NOTIFY_USER` webhook to other events: https://docs.saleor.io/docs/next/upgrade-guides/notify-user-deprecation
+  - See the docs for more details about migrating from the `NOTIFY_USER` webhook to other events: https://docs.weenspace.com/docs/next/upgrade-guides/notify-user-deprecation
 
 ### Saleor Apps
 
@@ -638,7 +638,7 @@ Shipping methods can be removed by the user after it has been assigned to a chec
     - `transactionRequestAction` mutation can't be executed with `MANAGE_ORDERS` permission. Permission `HANDLE_PAYMENTS` is required.
     - Drop calling `TRANSACTION_ACTION_REQUEST` webhook inside a mutation related to `Payment` types. The related mutations: `orderVoid`, `orderCapture`, `orderRefund`, `orderFulfillmentRefundProducts`, `orderFulfillmentReturnProducts`. Use a dedicated mutation for triggering an action: `transactionRequestAction`.
 
-  See the [3.12 to 3.13](https://docs.saleor.io/docs/3.x/upgrade-guides/3-12-to-3-13) upgrade guide for more details.
+  See the [3.12 to 3.13](https://docs.weenspace.com/docs/3.x/upgrade-guides/3-12-to-3-13) upgrade guide for more details.
 
 ### GraphQL API
 
@@ -1005,10 +1005,10 @@ Just so you know, changes mentioned in this section are in a preview state and c
   - `tick()` could decide to never schedule anything else than `send-sale-toggle-notifications` if `send-sale-toggle-notifications` doesn't return `is_due = False` (stuck forever until beat restart or a `is_due = True`)
   - `tick()` was sometimes scheduling other schedulers such as observability to be run every 5m instead of every 20s
   - `is_due()` from `send-sale-toggle-notifications` was being invoked every 5s on django-celery-beat instead of every 60s
-  - `send-sale-toggle-notifications` would crash on django-celery-beat with `Cannot convert schedule type <saleor.core.schedules.sale_webhook_schedule object at 0x7fabfdaacb20> to model`
+  - `send-sale-toggle-notifications` would crash on django-celery-beat with `Cannot convert schedule type <weenspace.core.schedules.sale_webhook_schedule object at 0x7fabfdaacb20> to model`
     Usage:
-  - Database backend: `celery --app saleor.celeryconf:app beat --scheduler saleor.schedulers.schedulers.DatabaseScheduler`
-  - Shelve backend: `celery --app saleor.celeryconf:app beat --scheduler saleor.schedulers.schedulers.PersistentScheduler`
+  - Database backend: `celery --app weenspace.celeryconf:app beat --scheduler weenspace.schedulers.schedulers.DatabaseScheduler`
+  - Shelve backend: `celery --app weenspace.celeryconf:app beat --scheduler weenspace.schedulers.schedulers.PersistentScheduler`
 - Fix problem with updating draft order with active Avalara - #10183 by @IKarbowiak
 - Fix stock validation and allocation for order with local collection point - #10218 by @IKarbowiak
 - Fix stock allocation for order with global collection point - #10225 by @IKarbowiak
@@ -1039,12 +1039,12 @@ Just so you know, changes mentioned in this section are in a preview state and c
   - `tick()` could decide to never schedule anything else than `send-sale-toggle-notifications` if `send-sale-toggle-notifications` doesn't return `is_due = False` (stuck forever until beat restart or a `is_due = True`)
   - `tick()` was sometimes scheduling other schedulers such as observability to be ran every 5m instead of every 20s
   - `is_due()` from `send-sale-toggle-notifications` was being invoked every 5s on django-celery-beat instead of every 60s
-  - `send-sale-toggle-notifications` would crash on django-celery-beat with `Cannot convert schedule type <saleor.core.schedules.sale_webhook_schedule object at 0x7fabfdaacb20> to model`
+  - `send-sale-toggle-notifications` would crash on django-celery-beat with `Cannot convert schedule type <weenspace.core.schedules.sale_webhook_schedule object at 0x7fabfdaacb20> to model`
 
   Usage:
 
-  - Database backend: `celery --app saleor.celeryconf:app beat --scheduler saleor.schedulers.schedulers.DatabaseScheduler`
-  - Shelve backend: `celery --app saleor.celeryconf:app beat --scheduler saleor.schedulers.schedulers.PersistentScheduler`
+  - Database backend: `celery --app weenspace.celeryconf:app beat --scheduler weenspace.schedulers.schedulers.DatabaseScheduler`
+  - Shelve backend: `celery --app weenspace.celeryconf:app beat --scheduler weenspace.schedulers.schedulers.PersistentScheduler`
 
 - Fix problem with updating draft order with active avalara - #10183 by @IKarbowiak
 - Fix stock validation and allocation for order with local collection point - #10218 by @IKarbowiak

@@ -9,19 +9,19 @@ from django.db import connections
 from django.test.testcases import TransactionTestCase
 
 pytest_plugins = [
-    "saleor.tests.fixtures",
-    "saleor.discount.tests.test_utils.fixtures",
-    "saleor.plugins.tests.fixtures",
-    "saleor.graphql.tests.fixtures",
-    "saleor.graphql.channel.tests.fixtures",
-    "saleor.graphql.channel.tests.benchmark.fixtures",
-    "saleor.graphql.checkout.tests.benchmark.fixtures",
-    "saleor.graphql.account.tests.benchmark.fixtures",
-    "saleor.graphql.order.tests.benchmark.fixtures",
-    "saleor.graphql.giftcard.tests.benchmark.fixtures",
-    "saleor.graphql.webhook.tests.benchmark.fixtures",
-    "saleor.plugins.webhook.tests.subscription_webhooks.fixtures",
-    "saleor.tax.tests.fixtures",
+    "weenspace.tests.fixtures",
+    "weenspace.discount.tests.test_utils.fixtures",
+    "weenspace.plugins.tests.fixtures",
+    "weenspace.graphql.tests.fixtures",
+    "weenspace.graphql.channel.tests.fixtures",
+    "weenspace.graphql.channel.tests.benchmark.fixtures",
+    "weenspace.graphql.checkout.tests.benchmark.fixtures",
+    "weenspace.graphql.account.tests.benchmark.fixtures",
+    "weenspace.graphql.order.tests.benchmark.fixtures",
+    "weenspace.graphql.giftcard.tests.benchmark.fixtures",
+    "weenspace.graphql.webhook.tests.benchmark.fixtures",
+    "weenspace.plugins.webhook.tests.subscription_webhooks.fixtures",
+    "weenspace.tax.tests.fixtures",
 ]
 
 
