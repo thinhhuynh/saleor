@@ -65,13 +65,13 @@ class NPAtobaraiGatewayPlugin(BasePlugin):
         },
         USE_SANDBOX: {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should use NP後払い sandbox API.",
+            "help_text": "Determines if WeenSpace should use NP後払い sandbox API.",
             "label": "Use sandbox",
         },
         FILL_MISSING_ADDRESS: {
             "type": ConfigurationTypeField.BOOLEAN,
             "help_text": (
-                "Determines if Saleor should generate missing "
+                "Determines if WeenSpace should generate missing "
                 "AddressData.city and AddressData.city_area"
             ),
             "label": "Fill missing address",

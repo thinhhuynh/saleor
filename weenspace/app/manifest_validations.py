@@ -89,7 +89,7 @@ def clean_manifest_url(manifest_url):
 
 
 def clean_permissions(
-    required_permissions: list[str], saleor_permissions: Iterable[Permission]
+    required_permissions: list[str], weenspace_permissions: Iterable[Permission]
 ) -> list[Permission]:
     missing_permissions = []
     all_permissions = {perm[0]: perm[1] for perm in get_permissions_enum_list()}
@@ -104,10 +104,10 @@ def clean_permissions(
 
     permissions = [all_permissions[perm] for perm in required_permissions]
     permissions = split_permission_codename(permissions)
-    return [p for p in saleor_permissions if p.codename in permissions]
+    return [p for p in weenspace_permissions if p.codename in permissions]
 
 
-def clean_manifest_data(manifest_data, raise_for_saleor_version=False):
+def clean_manifest_data(manifest_data, raise_for_weenspace_version=False):
     errors: T_ERRORS = defaultdict(list)
 
     validate_required_fields(manifest_data, errors)
@@ -123,8 +123,8 @@ def clean_manifest_data(manifest_data, raise_for_saleor_version=False):
         )
 
     try:
-        manifest_data["requiredSaleorVersion"] = clean_required_saleor_version(
-            manifest_data.get("requiredSaleorVersion"), raise_for_saleor_version
+        manifest_data["requiredSaleorVersion"] = clean_required_weenspace_version(
+            manifest_data.get("requiredSaleorVersion"), raise_for_weenspace_version
         )
     except ValidationError as e:
         errors["requiredSaleorVersion"].append(e)
@@ -139,12 +139,12 @@ def clean_manifest_data(manifest_data, raise_for_saleor_version=False):
     except ValidationError as e:
         errors["brand"].append(e)
 
-    saleor_permissions = get_permissions().annotate(
+    weenspace_permissions = get_permissions().annotate(
         formatted_codename=Concat("content_type__app_label", Value("."), "codename")
     )
     try:
         app_permissions = clean_permissions(
-            manifest_data.get("permissions", []), saleor_permissions
+            manifest_data.get("permissions", []), weenspace_permissions
         )
     except ValidationError as e:
         errors["permissions"].append(e)
@@ -335,9 +335,9 @@ def parse_version(version_str: str) -> Version:
     return Version(version_str)
 
 
-def clean_required_saleor_version(
+def clean_required_weenspace_version(
     required_version,
-    raise_for_saleor_version: bool,
+    raise_for_weenspace_version: bool,
     saleor_version=__version__,
 ) -> Optional[dict]:
     if not required_version:
@@ -345,13 +345,13 @@ def clean_required_saleor_version(
     try:
         spec = RequiredSaleorVersionSpec(required_version)
     except Exception:
-        msg = "Incorrect value for required Saleor version."
+        msg = "Incorrect value for required WeenSpace version."
         raise ValidationError(msg, code=AppErrorCode.INVALID.value)
     version = parse_version(saleor_version)
     satisfied = spec.match(version)
-    if raise_for_saleor_version and not satisfied:
-        msg = f"Saleor version {saleor_version} is not supported by the app."
-        raise ValidationError(msg, code=AppErrorCode.UNSUPPORTED_SALEOR_VERSION.value)
+    if raise_for_weenspace_version and not satisfied:
+        msg = f"WeenSpace version {saleor_version} is not supported by the app."
+        raise ValidationError(msg, code=AppErrorCode.UNSUPPORTED_VERSION.value)
     return {"constraint": required_version, "satisfied": satisfied}
 
 

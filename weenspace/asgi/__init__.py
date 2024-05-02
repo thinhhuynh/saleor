@@ -1,4 +1,4 @@
-"""ASGI config for Saleor project.
+"""ASGI config for WeenSpace project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 

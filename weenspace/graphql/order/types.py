@@ -1130,7 +1130,7 @@ class Order(ModelObjectType[models.Order]):
         User,
         description=(
             "User who placed the order. This field is set only for orders placed by "
-            "authenticated users. Can be fetched for orders created in Saleor 3.2 "
+            "authenticated users. Can be fetched for orders created in WeenSpace 3.2 "
             "and later, for other orders requires one of the following permissions: "
             f"{AccountPermissions.MANAGE_USERS.name}, "
             f"{OrderPermissions.MANAGE_ORDERS.name}, "
@@ -1146,7 +1146,7 @@ class Order(ModelObjectType[models.Order]):
         "weenspace.graphql.account.types.Address",
         description=(
             "Billing address. The full data can be access for orders created "
-            "in Saleor 3.2 and later, for other orders requires one of the following "
+            "in WeenSpace 3.2 and later, for other orders requires one of the following "
             f"permissions: {OrderPermissions.MANAGE_ORDERS.name}, "
             f"{AuthorizationFilters.OWNER.name}."
         ),
@@ -1155,7 +1155,7 @@ class Order(ModelObjectType[models.Order]):
         "weenspace.graphql.account.types.Address",
         description=(
             "Shipping address. The full data can be access for orders created "
-            "in Saleor 3.2 and later, for other orders requires one of the following "
+            "in WeenSpace 3.2 and later, for other orders requires one of the following "
             f"permissions: {OrderPermissions.MANAGE_ORDERS.name}, "
             f"{AuthorizationFilters.OWNER.name}."
         ),
@@ -1203,7 +1203,7 @@ class Order(ModelObjectType[models.Order]):
     invoices = NonNullList(
         Invoice,
         description=(
-            "List of order invoices. Can be fetched for orders created in Saleor 3.2 "
+            "List of order invoices. Can be fetched for orders created in WeenSpace 3.2 "
             "and later, for other orders requires one of the following permissions: "
             f"{OrderPermissions.MANAGE_ORDERS.name}, {AuthorizationFilters.OWNER.name}."
         ),
@@ -1369,7 +1369,7 @@ class Order(ModelObjectType[models.Order]):
     user_email = graphene.String(
         description=(
             "Email address of the customer. The full data can be access for orders "
-            "created in Saleor 3.2 and later, for other orders requires one of "
+            "created in WeenSpace 3.2 and later, for other orders requires one of "
             f"the following permissions: {OrderPermissions.MANAGE_ORDERS.name}, "
             f"{AuthorizationFilters.OWNER.name}."
         ),

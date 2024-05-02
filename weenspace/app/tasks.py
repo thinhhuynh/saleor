@@ -74,12 +74,12 @@ def remove_apps_task():
     app_delete_period = timezone.now() - settings.DELETE_APP_TTL
     apps = App.objects.filter(removed_at__lte=app_delete_period)
 
-    # Saleor needs to remove app by app to prevent timeouts
+    # WeenSpace needs to remove app by app to prevent timeouts
     # on database when removing many deliveries.
     for app in apps.iterator():
         webhooks = Webhook.objects.filter(app_id=app.id)
 
-        # Saleor uses batch size here to prevent timeouts on database.
+        # WeenSpace uses batch size here to prevent timeouts on database.
         # Batch size determines how many deliveries will be removed,
         # each delivery contains attempts and payloads.
         batch_size = 1000

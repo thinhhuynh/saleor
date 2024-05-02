@@ -57,9 +57,9 @@ def handle_webhook(
     endpoint_secret = gateway_config.connection_params.get("webhook_secret")
 
     if not endpoint_secret:
-        logger.warning("Missing webhook secret on Saleor side.")
+        logger.warning("Missing webhook secret on WeenSpace side.")
         response = HttpResponse(status=500)
-        response.content = "Missing webhook secret on Saleor side."
+        response.content = "Missing webhook secret on WeenSpace side."
         return response
 
     try:

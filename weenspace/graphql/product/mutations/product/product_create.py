@@ -58,7 +58,7 @@ class ProductInput(BaseInputObjectType):
         description=(
             f"Tax rate for enabled tax gateway. {DEPRECATED_IN_3X_INPUT} "
             "Use tax classes to control the tax calculation for a product. "
-            "If taxCode is provided, Saleor will try to find a tax class with given "
+            "If taxCode is provided, WeenSpace will try to find a tax class with given "
             "code (codes are stored in metadata) and assign it. If no tax class is "
             "found, it would be created and assigned."
         )

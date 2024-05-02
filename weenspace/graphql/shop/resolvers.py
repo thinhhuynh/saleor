@@ -43,7 +43,7 @@ def resolve_countries(info, **kwargs):
     codes_list = get_countries_codes_list(
         attached_to_shipping_zones, database_connection_name=database_connection_name
     )
-    # DEPRECATED: translation.override will be dropped in Saleor 4.0
+    # DEPRECATED: translation.override will be dropped in WeenSpace 4.0
     with translation.override(language_code):
         return [
             CountryDisplay(code=country[0], country=country[1], vat=None)

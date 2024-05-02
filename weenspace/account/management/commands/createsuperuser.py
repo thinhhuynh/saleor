@@ -1,7 +1,7 @@
 # mypy: ignore-errors
 """Management utility to create superusers.
 
-This module was moved for Django Auth directly to Saleor.
+This module was moved for Django Auth directly to WeenSpace.
 """
 
 import getpass

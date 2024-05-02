@@ -250,7 +250,7 @@ def create_delivery_for_subscription_sync_event(
         logger.info(
             "No payload was generated with subscription for event: %s", event_type
         )
-        # Return None so if subscription query returns no data Saleor will not crash but
+        # Return None so if subscription query returns no data WeenSpace will not crash but
         # log the issue and continue without creating a delivery.
         return None
 

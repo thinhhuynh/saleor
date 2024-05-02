@@ -31,11 +31,11 @@ class SaleorContext(HttpRequest):
 def disallow_replica_in_context(context: SaleorContext) -> None:
     """Set information in context to use database replicas or not.
 
-    Part of the database read replicas in Saleor.
-    When Saleor builds a response for mutation `context` stores information
+    Part of the database read replicas in WeenSpace.
+    When WeenSpace builds a response for mutation `context` stores information
     `allow_replica=False`. That means that all data should be provided from
     the master database.
-    When Saleor builds a response for query, set `allow_replica`=True in `context`.
+    When WeenSpace builds a response for query, set `allow_replica`=True in `context`.
     That means that all data should be provided from reading replica of the database.
     Database read replica couldn't be used to save any data.
     """
@@ -45,7 +45,7 @@ def disallow_replica_in_context(context: SaleorContext) -> None:
 def get_database_connection_name(context: SaleorContext) -> str:
     """Retrieve connection name based on request context.
 
-    Part of the database read replicas in Saleor.
+    Part of the database read replicas in WeenSpace.
     Return proper connection name based on `context`.
     For more info check `disallow_replica_in_context`
     Add `.using(connection_name)` to use connection name in QuerySet.

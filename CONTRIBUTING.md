@@ -2,16 +2,16 @@
 title: Contributing
 ---
 
-We welcome all contributions to Saleor, including issues, new features, docs, discussions, and more. Read the following document to learn more about the process of contributing.
+We welcome all contributions to WeenSpace, including issues, new features, docs, discussions, and more. Read the following document to learn more about the process of contributing.
 
 ## Issues
 
-Use [Github Issues](https://github.com/WeenSpace/weenspace/issues) to report a bug or a problem that you found in Saleor. Use the "Bug report" issue template to provide information that will help us confirm the bug, such as steps to reproduce, expected behavior, Saleor version, and any additional context. When our team confirms a bug, it will be added to the internal backlog and picked up as soon as possible. When willing to fix a bug, let us know in the issue comment, and we will try to assist you on the way.
+Use [Github Issues](https://github.com/WeenSpace/weenspace/issues) to report a bug or a problem that you found in WeenSpace. Use the "Bug report" issue template to provide information that will help us confirm the bug, such as steps to reproduce, expected behavior, WeenSpace version, and any additional context. When our team confirms a bug, it will be added to the internal backlog and picked up as soon as possible. When willing to fix a bug, let us know in the issue comment, and we will try to assist you on the way.
 
 ## New features
-When willing to propose or add a new feature, we encourage you first to open a [discussion](https://github.com/WeenSpace/weenspace/discussions) or an [issue](https://github.com/WeenSpace/weenspace/issues) (using "Feature request" template) to discuss it with the core team. This process helps us decide if a feature is suitable for Saleor or design it before any implementation starts.
+When willing to propose or add a new feature, we encourage you first to open a [discussion](https://github.com/WeenSpace/weenspace/discussions) or an [issue](https://github.com/WeenSpace/weenspace/issues) (using "Feature request" template) to discuss it with the core team. This process helps us decide if a feature is suitable for WeenSpace or design it before any implementation starts.
 
-Before merging, any new pull requests submitted to Saleor have to be reviewed and approved by the core team. We review pull requests daily, but if a pull request requires more time or feedback from the team, it will be marked as "queued for review".
+Before merging, any new pull requests submitted to WeenSpace have to be reviewed and approved by the core team. We review pull requests daily, but if a pull request requires more time or feedback from the team, it will be marked as "queued for review".
 
 ## Managing dependencies
 
@@ -21,20 +21,20 @@ To guarantee repeatable installations, all project dependencies are managed usin
 Running `poetry lock` generates `poetry.lock` which has all versions pinned.
 
 You can install Poetry by using `pip install --pre poetry` or by following the official installation guide [here](https://github.com/sdispater/poetry#installation).
-We recommend using at least version `1.0.0b` as it contains many fixes and features that Saleor relies on.
+We recommend using at least version `1.0.0b` as it contains many fixes and features that WeenSpace relies on.
 
 *Tip:* We recommend that you use this workflow and keep `pyproject.toml` as well as `poetry.lock` under version control to make sure all computers and environments run exactly the same code.
 
 ## Coding style
 
-Saleor uses various tools to maintain a common coding style and help with development.
+WeenSpace uses various tools to maintain a common coding style and help with development.
 To install all the development tools, use [Poetry](https://python-poetry.org):
 
 ```shell
 poetry install
 ```
 
-Saleor uses the [pre-commit](https://pre-commit.com/#install) tool to check and automatically fix any formatting issue before creating a git commit.
+WeenSpace uses the [pre-commit](https://pre-commit.com/#install) tool to check and automatically fix any formatting issue before creating a git commit.
 
 Run the following command to install pre-commit into your git hooks and have it run on every commit:
 
@@ -44,7 +44,7 @@ pre-commit install
 
 For more information on how it works, see the `.pre-commit-config.yaml` configuration file.
 
-Saleor has a strict formatting policy enforced by the [black formatting tool](https://github.com/python/black).
+WeenSpace has a strict formatting policy enforced by the [black formatting tool](https://github.com/python/black).
 
 Module names should make their purpose obvious. Avoid generic file names such as `utils.py`.
 
@@ -56,7 +56,7 @@ Use [ruff](https://github.com/astral-sh/ruff) to check and format your code.
 
 [EditorConfig](http://editorconfig.org/) is a standard configuration file that aims to ensure consistent style across multiple programming environments.
 
-Saleor’s repository contains [an `.editorconfig` file](https://github.com/WeenSpace/weenspace/blob/master/.editorconfig) describing our formatting requirements.
+WeenSpace’s repository contains [an `.editorconfig` file](https://github.com/WeenSpace/weenspace/blob/master/.editorconfig) describing our formatting requirements.
 
 Most editors and IDEs support this file either directly or via plugins. See the [list of supported editors and IDEs](http://editorconfig.org/#download) for detailed instructions.
 

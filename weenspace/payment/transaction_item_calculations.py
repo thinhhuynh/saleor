@@ -373,7 +373,7 @@ def recalculate_transaction_amounts(transaction: TransactionItem, save: bool = T
     success event will be ignored.
 
     There is a possibility of having events that don't have psp reference (for
-    example the events created by Saleor to keep correct amounts). In that case
+    example the events created by WeenSpace to keep correct amounts). In that case
     the event amounts will be included in the transaction amounts.
     """
     calculate_transaction_amount_based_on_events(transaction)

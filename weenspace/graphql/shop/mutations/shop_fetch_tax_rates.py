@@ -20,5 +20,5 @@ class ShopFetchTaxRates(BaseMutation):
 
     @classmethod
     def perform_mutation(cls, _root, _info: ResolveInfo, /):
-        # This mutation is deprecated and will be removed in Saleor 4.0.
+        # This mutation is deprecated and will be removed in WeenSpace 4.0.
         return ShopFetchTaxRates(shop=Shop())

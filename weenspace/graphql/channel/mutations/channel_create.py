@@ -70,7 +70,7 @@ class CheckoutSettingsInput(BaseInputObjectType):
             "updating checkoutShippingAddress.) "
             "If `false`, the errors will be aggregated in `checkout.problems` field. "
             "Some of the `problems` can block the finalizing checkout process. "
-            "The legacy flow will be removed in Saleor 4.0. "
+            "The legacy flow will be removed in WeenSpace 4.0. "
             "The flow with `checkout.problems` will be the default one. "
             + ADDED_IN_315
             + DEPRECATED_IN_3X_INPUT

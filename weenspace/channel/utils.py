@@ -18,7 +18,7 @@ def get_default_channel(allow_replica: bool = False) -> Channel:
     Returns a channel only when exactly one channel exists in the system. If there are
     more channels, you need to ensure that the channel is explicitly specified. This
     function is intended to use throughout the full migration to the multi-channel
-    approach in Saleor and will be removed after 2020-12-31. Since then, the API and
+    approach in WeenSpace and will be removed after 2020-12-31. Since then, the API and
     all functions will require specifying the channel.
 
     :raises ChannelNotDefined: When there is more than one channel.

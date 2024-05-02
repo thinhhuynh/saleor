@@ -191,7 +191,7 @@ class Webhook(ModelObjectType[models.Webhook]):
     secret_key = graphene.String(
         description="Used to create a hash signature for each payload.",
         deprecation_reason=(
-            f"{DEPRECATED_IN_3X_FIELD} As of Saleor 3.5, webhook payloads default to "
+            f"{DEPRECATED_IN_3X_FIELD} As of WeenSpace 3.5, webhook payloads default to "
             "signing using a verifiable JWS."
         ),
     )

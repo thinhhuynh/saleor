@@ -1,4 +1,4 @@
-"""List of all languages supported in Saleor.
+"""List of all languages supported in WeenSpace.
 
 Generated with Babel:
 

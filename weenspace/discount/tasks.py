@@ -78,7 +78,7 @@ def handle_promotion_toggle():
         manager.promotion_ended(ending_promo, webhooks=ended_webhooks)
 
     toggle_webhooks = get_webhooks_for_event(WebhookEventAsyncType.SALE_TOGGLE)
-    # DEPRECATED: will be removed in Saleor 4.0.
+    # DEPRECATED: will be removed in WeenSpace 4.0.
     for promotion in promotions:
         variants = promotion_id_to_variants.get(promotion.id)
         catalogues = {
@@ -107,7 +107,7 @@ def handle_promotion_toggle():
         [str(ending_promo.id) for ending_promo in ending_promotions]
     )
 
-    # DEPRECATED: will be removed in Saleor 4.0.
+    # DEPRECATED: will be removed in WeenSpace 4.0.
     promotion_ids_str = ", ".join([str(promo.id) for promo in promotions])
 
     promotions.update(last_notification_scheduled_at=datetime.now(pytz.UTC))
@@ -122,7 +122,7 @@ def handle_promotion_toggle():
             ending_promotions_ids,
         )
 
-    # DEPRECATED: will be removed in Saleor 4.0.
+    # DEPRECATED: will be removed in WeenSpace 4.0.
     task_logger.info(
         "The sale_toggle webhook sent for sales with ids: %s", promotion_ids_str
     )

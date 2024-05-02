@@ -40,7 +40,7 @@ from ...site.models import Site
 from ..error_codes import PluginErrorCode
 from ..models import PluginConfiguration
 from . import PLUGIN_ID
-from .const import SALEOR_STAFF_PERMISSION
+from .const import WEENSPACE_STAFF_PERMISSION
 from .exceptions import AuthenticationError
 
 if TYPE_CHECKING:
@@ -214,11 +214,11 @@ def get_user_from_oauth_access_token_in_jwt_format(
     is_staff = None
     email_domain = get_domain_from_email(user.email)
     is_staff_email = email_domain in staff_user_domains
-    is_staff_id = SALEOR_STAFF_PERMISSION
+    is_staff_id = WEENSPACE_STAFF_PERMISSION
     if (use_scope_permissions and audience_in_token) or is_staff_email:
-        permissions = get_saleor_permissions_qs_from_scope(scope)
+        permissions = get_weenspace_permissions_qs_from_scope(scope)
         if not permissions and token_permissions:
-            permissions = get_saleor_permissions_from_list(token_permissions)
+            permissions = get_weenspace_permissions_from_list(token_permissions)
         user.effective_permissions = permissions
 
         is_staff_in_scope = is_staff_id in scope
@@ -683,20 +683,20 @@ def get_incorrect_fields(plugin_configuration: "PluginConfiguration"):
         return incorrect_fields
 
 
-def get_saleor_permissions_qs_from_scope(scope: str) -> QuerySet[Permission]:
+def get_weenspace_permissions_qs_from_scope(scope: str) -> QuerySet[Permission]:
     scope_list = scope.lower().strip().split()
-    return get_saleor_permissions_from_list(scope_list)
+    return get_weenspace_permissions_from_list(scope_list)
 
 
-def get_saleor_permissions_from_list(permissions: list) -> QuerySet[Permission]:
-    saleor_permissions_str = [s for s in permissions if s.startswith("saleor:")]
-    if SALEOR_STAFF_PERMISSION in saleor_permissions_str:
-        saleor_permissions_str.remove(SALEOR_STAFF_PERMISSION)
-    if not saleor_permissions_str:
+def get_weenspace_permissions_from_list(permissions: list) -> QuerySet[Permission]:
+    weenspace_permissions_str = [s for s in permissions if s.startswith("weenspace:")]
+    if WEENSPACE_STAFF_PERMISSION in weenspace_permissions_str:
+        weenspace_permissions_str.remove(WEENSPACE_STAFF_PERMISSION)
+    if not weenspace_permissions_str:
         return Permission.objects.none()
 
     permission_codenames = list(
-        map(lambda perm: perm.replace("saleor:", ""), saleor_permissions_str)
+        map(lambda perm: perm.replace("weenspace:", ""), weenspace_permissions_str)
     )
     permissions = get_permissions_from_codenames(permission_codenames)
     return permissions

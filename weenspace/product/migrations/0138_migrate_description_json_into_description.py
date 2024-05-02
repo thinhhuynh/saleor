@@ -114,7 +114,7 @@ class Migration(migrations.Migration):
             ),
         ),
         migrations.RunPython(
-            migrate_description_json_into_description_field,
+            # migrate_description_json_into_description_field,
             migrations.RunPython.noop,
         ),
     ]

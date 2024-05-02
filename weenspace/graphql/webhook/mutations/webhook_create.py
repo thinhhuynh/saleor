@@ -59,7 +59,7 @@ class WebhookCreateInput(BaseInputObjectType):
     )
     secret_key = graphene.String(
         description="The secret key used to create a hash signature with each payload."
-        f"{DEPRECATED_IN_3X_INPUT} As of Saleor 3.5, webhook payloads default to "
+        f"{DEPRECATED_IN_3X_INPUT} As of WeenSpace 3.5, webhook payloads default to "
         "signing using a verifiable JWS.",
         required=False,
     )

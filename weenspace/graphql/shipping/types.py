@@ -104,7 +104,7 @@ class ShippingMethodPostalCodeRule(
 
 
 class ShippingMethodType(ChannelContextTypeWithMetadataForObjectType):
-    """Represents internal shipping method managed within Saleor.
+    """Represents internal shipping method managed within WeenSpace.
 
     Internal and external (fetched by sync webhooks) shipping methods are later
     represented by `ShippingMethod` objects as part of orders and checkouts.

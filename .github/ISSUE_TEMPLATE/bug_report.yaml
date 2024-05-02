@@ -15,7 +15,7 @@ body:
     id: steps
     attributes:
       label: Steps to reproduce the problem
-      description: Reproduction steps starting with an empty database. You can use a free Saleor Cloud environment as a quick starting point.
+      description: Reproduction steps starting with an empty database. You can use a free WeenSpace Cloud environment as a quick starting point.
       placeholder: |
         1. Create a product with two attributes…
         2. …
@@ -43,7 +43,7 @@ body:
       label: Environment
       description: Provide some information about your environment.
       value: |
-        Saleor version: …
+        WeenSpace version: …
         OS and version: …
     validations:
       required: true

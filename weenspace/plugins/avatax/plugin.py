@@ -106,7 +106,7 @@ class AvataxPlugin(BasePlugin):
         },
         "Use sandbox": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should use Avatax sandbox API.",
+            "help_text": "Determines if WeenSpace should use Avatax sandbox API.",
             "label": "Use sandbox",
         },
         "Company name": {

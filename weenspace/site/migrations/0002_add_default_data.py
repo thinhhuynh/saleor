@@ -10,8 +10,8 @@ def create_default_site(apps, schema_editor):
     SiteSettings.objects.get_or_create(
         pk=settings_id,
         defaults={
-            "name": "Saleor e-commerce",
-            "header_text": "Test Saleor - a sample shop!",
+            "name": "WeenSpace e-commerce",
+            "header_text": "Test WeenSpace - a sample shop!",
             "domain": "localhost:8000",
         },
     )

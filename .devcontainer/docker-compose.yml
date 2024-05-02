@@ -54,6 +54,24 @@ services:
       - "8025" # Mailpit UI
     restart: unless-stopped
 
+  zitadel:
+    image: 'ghcr.io/zitadel/zitadel:latest'
+    command: 'start-from-init --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode disabled'
+    environment:
+      - 'ZITADEL_DATABASE_POSTGRES_HOST=localhost'
+      - 'ZITADEL_DATABASE_POSTGRES_PORT=5432'
+      - 'ZITADEL_DATABASE_POSTGRES_DATABASE=zitadel'
+      - 'ZITADEL_DATABASE_POSTGRES_USER_USERNAME=weenspace'
+      - 'ZITADEL_DATABASE_POSTGRES_USER_PASSWORD=weenspace'
+      - 'ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE=disable'
+      - 'ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME=weenspace'
+      - 'ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD=weenspace'
+      - 'ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE=disable'
+      - 'ZITADEL_EXTERNALSECURE=false'
+    restart: 'always'
+    ports:
+      - '8089:8080'
+
 volumes:
   weenspace-db:
     driver: local

@@ -24,7 +24,7 @@ class DeprecatedStripeGatewayPlugin(BasePlugin):
     PLUGIN_NAME = GATEWAY_NAME
     PLUGIN_ID = "mirumee.payments.stripe"
     PLUGIN_DESCRIPTION = """
-    This plugin will be removed in Saleor 4.0. Use the new Stripe plugin which
+    This plugin will be removed in WeenSpace 4.0. Use the new Stripe plugin which
     implements webhook support, 3D Secure and SCA.
     """
 
@@ -49,13 +49,13 @@ class DeprecatedStripeGatewayPlugin(BasePlugin):
         },
         "Store customers card": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should store cards on payments "
+            "help_text": "Determines if WeenSpace should store cards on payments "
             "in Stripe customer.",
             "label": "Store customers card",
         },
         "Automatic payment capture": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should automatically capture payments.",
+            "help_text": "Determines if WeenSpace should automatically capture payments.",
             "label": "Automatic payment capture",
         },
         "Supported currencies": {

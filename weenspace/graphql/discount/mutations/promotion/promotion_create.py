@@ -86,7 +86,7 @@ class PromotionCreateInput(PromotionInput):
             "predicate type and whether the promotion rules will give the catalogue "
             "or order discount. "
             "\n\nThe default value is `Catalogue`."
-            "\n\nThis field will be required from Saleor 3.20." + ADDED_IN_319
+            "\n\nThis field will be required from WeenSpace 3.20." + ADDED_IN_319
         ),
         required=False,
     )

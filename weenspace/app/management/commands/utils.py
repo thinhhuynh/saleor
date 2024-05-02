@@ -8,7 +8,7 @@ def clean_permissions(required_permissions: list[str]):
     for perm in required_permissions:
         if not all_permissions.get(perm):
             raise CommandError(
-                f"Permission: {perm} doesn't exist in Saleor."
+                f"Permission: {perm} doesn't exist in WeenSpace."
                 f" Available permissions: {all_permissions}"
             )
     permissions = get_permissions(

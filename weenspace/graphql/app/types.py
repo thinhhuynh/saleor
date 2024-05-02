@@ -241,13 +241,13 @@ class AppManifestRequiredSaleorVersion(BaseObjectType):
     constraint = graphene.String(
         required=True,
         description=(
-            "Required Saleor version as semver range." + ADDED_IN_313 + PREVIEW_FEATURE
+            "Required WeenSpace version as semver range." + ADDED_IN_313 + PREVIEW_FEATURE
         ),
     )
     satisfied = graphene.Boolean(
         required=True,
         description=(
-            "Informs if the Saleor version matches the required one."
+            "Informs if the WeenSpace version matches the required one."
             + ADDED_IN_313
             + PREVIEW_FEATURE
         ),
@@ -422,7 +422,7 @@ class Manifest(BaseObjectType):
         AppManifestExtension,
         required=True,
         description=(
-            "List of extensions that will be mounted in Saleor's dashboard. "
+            "List of extensions that will be mounted in WeenSpace's dashboard. "
             "For details, please [see the extension section.]"
             "(https://docs.weenspace.com/docs/3.x/developer/extending/apps/extending-dashboard-with-apps#key-concepts)"
         ),
@@ -438,10 +438,10 @@ class Manifest(BaseObjectType):
             + ADDED_IN_38
         )
     )
-    required_saleor_version = graphene.Field(
+    required_weenspace_version = graphene.Field(
         AppManifestRequiredSaleorVersion,
         description=(
-            "Determines the app's required Saleor version as semver range."
+            "Determines the app's required WeenSpace version as semver range."
             + ADDED_IN_313
             + PREVIEW_FEATURE
         ),

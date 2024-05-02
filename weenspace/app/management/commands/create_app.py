@@ -54,7 +54,7 @@ class Command(BaseCommand):
     def send_app_data(self, target_url, data: dict[str, Any]):
         domain = get_domain()
         headers = {
-            # X- headers will be deprecated in Saleor 4.0, proper headers are without X-
+            # X- headers will be deprecated in WeenSpace 4.0, proper headers are without X-
             DeprecatedAppHeaders.DOMAIN: domain,
             AppHeaders.DOMAIN: domain,
             AppHeaders.API_URL: build_absolute_uri(reverse("api"), domain),

@@ -9,6 +9,6 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        # Empty migration for consistency with Saleor 3.16.
+        # Empty migration for consistency with WeenSpace 3.16.
         # The migration was fixing the issue introduced in 3.16.5.
     ]

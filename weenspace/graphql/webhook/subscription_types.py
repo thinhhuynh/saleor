@@ -117,7 +117,7 @@ class IssuingPrincipal(Union):
 
 class Event(graphene.Interface):
     issued_at = graphene.DateTime(description="Time of the event.")
-    version = graphene.String(description="Saleor version that triggered the event.")
+    version = graphene.String(description="WeenSpace version that triggered the event.")
     issuing_principal = graphene.Field(
         IssuingPrincipal,
         description="The user or application that triggered the event.",
@@ -1993,7 +1993,7 @@ class TransactionSessionBase(SubscriptionObjectType, AbstractType):
     customer_ip_address = graphene.String(
         description=(
             "The customer's IP address. If not provided as a parameter in the "
-            "mutation, Saleor will try to determine the customer's IP address on its "
+            "mutation, WeenSpace will try to determine the customer's IP address on its "
             "own." + ADDED_IN_316
         ),
     )

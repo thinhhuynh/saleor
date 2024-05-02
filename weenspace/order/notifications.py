@@ -261,7 +261,7 @@ def get_default_order_payload(order: "Order", redirect_url: str = ""):
     order_payload.update(
         {
             "id": to_global_id_or_none(order),
-            "token": order.id,  # DEPRECATED: will be removed in Saleor 4.0.
+            "token": order.id,  # DEPRECATED: will be removed in WeenSpace 4.0.
             "number": order.number,
             "channel_slug": order.channel.slug,
             "created": str(order.created_at),
@@ -281,7 +281,7 @@ def get_default_order_payload(order: "Order", redirect_url: str = ""):
         }
     )
     # Deprecated: override private_metadata with empty dict as it shouldn't be returned
-    # in the payload (see SALEOR-7046). Should be removed in Saleor 4.0.
+    # in the payload (see WEENSPACE-7046). Should be removed in WeenSpace 4.0.
     order_payload["private_metadata"] = {}
     return order_payload
 

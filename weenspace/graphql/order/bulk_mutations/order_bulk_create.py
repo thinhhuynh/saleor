@@ -479,7 +479,7 @@ class OrderBulkCreateInput(BaseInputObjectType):
     )
     created_at = graphene.DateTime(
         required=True,
-        description="The date, when the order was inserted to Saleor database.",
+        description="The date, when the order was inserted to WeenSpace database.",
     )
     status = OrderStatusEnum(description="Status of the order.")
     user = graphene.Field(
@@ -746,7 +746,7 @@ class OrderBulkCreate(BaseMutation, I18nMixin):
     def is_datetime_valid(cls, date: datetime) -> bool:
         """We accept future time values with 5 minutes from current time.
 
-        Some systems might have incorrect time that is in the future compared to Saleor.
+        Some systems might have incorrect time that is in the future compared to WeenSpace.
         At the same time, we don't want to create orders that are too far in the future.
         """
         current_time = timezone.now()

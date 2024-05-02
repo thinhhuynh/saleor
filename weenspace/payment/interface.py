@@ -282,7 +282,7 @@ class GatewayResponse:
     """Dataclass for storing gateway response.
 
     Used for unifying the representation of gateway response.
-    It is required to communicate between Saleor and given payment gateway.
+    It is required to communicate between WeenSpace and given payment gateway.
     """
 
     is_success: bool
@@ -354,7 +354,7 @@ class PaymentData:
     """Dataclass for storing all payment information.
 
     Used for unifying the representation of data.
-    It is required to communicate between Saleor and given payment gateway.
+    It is required to communicate between WeenSpace and given payment gateway.
     """
 
     gateway: str
@@ -405,7 +405,7 @@ class GatewayConfig:
     """Dataclass for storing gateway config data.
 
     Used for unifying the representation of config data.
-    It is required to communicate between Saleor and given payment gateway.
+    It is required to communicate between WeenSpace and given payment gateway.
     """
 
     gateway_name: str

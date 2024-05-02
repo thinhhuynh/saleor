@@ -878,7 +878,7 @@ class StaffNotificationRecipient(graphene.ObjectType):
 
     class Meta:
         description = (
-            "Represents a recipient of email notifications send by Saleor, "
+            "Represents a recipient of email notifications send by WeenSpace, "
             "such as notifications about new orders. Notifications can be "
             "assigned to staff users or arbitrary email addresses."
         )

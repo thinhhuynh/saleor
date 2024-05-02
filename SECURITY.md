@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-The following releases of Saleor are currently supported.
+The following releases of WeenSpace are currently supported.
 
 | Version | Supported          |
 | ------- | ------------------ |

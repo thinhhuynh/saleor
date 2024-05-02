@@ -66,7 +66,7 @@ def from_global_id_or_error(
 ):
     """Resolve global ID or raise GraphQLError.
 
-    Validates if given ID is a proper ID handled by Saleor.
+    Validates if given ID is a proper ID handled by WeenSpace.
     Valid IDs formats, base64 encoded:
     'app:<int>:<str>' : External app ID with 'app' prefix
     '<type>:<int>' : Internal ID containing object type and ID as integer

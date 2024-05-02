@@ -90,6 +90,6 @@ jobs:
           JOB_STATUS: ${{ job.status }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_CLOUD_CI_WEBHOOK_URL }}
           SLACK_MENTION_GROUP_ID: ${{ secrets.SLACK_CORE_SUPPORT_GROUP_ID }}
-          JOB_TITLE: "Build of Saleor Core ${{ steps.meta.outputs.version }}"
+          JOB_TITLE: "Build of WeenSpace Core ${{ steps.meta.outputs.version }}"
         run: |
           python3 ./.github/workflows/notify/notify-slack.py

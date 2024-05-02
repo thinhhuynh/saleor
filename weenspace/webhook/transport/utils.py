@@ -124,7 +124,7 @@ def send_webhook_using_http(
     """
     headers = {
         "Content-Type": "application/json",
-        # X- headers will be deprecated in Saleor 4.0, proper headers are without X-
+        # X- headers will be deprecated in WeenSpace 4.0, proper headers are without X-
         DeprecatedAppHeaders.EVENT_TYPE: event_type,
         DeprecatedAppHeaders.DOMAIN: domain,
         DeprecatedAppHeaders.SIGNATURE: signature,

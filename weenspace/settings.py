@@ -155,7 +155,7 @@ EMAIL_USE_SSL: bool = email_config.get("EMAIL_USE_SSL", False)
 
 ENABLE_SSL: bool = get_bool_from_env("ENABLE_SSL", False)
 
-# URL on which Saleor is hosted (e.g., https://api.example.com/). This has precedence
+# URL on which WeenSpace is hosted (e.g., https://api.example.com/). This has precedence
 # over ENABLE_SSL and Shop.domain when generating URLs pointing to itself.
 PUBLIC_URL: Optional[str] = get_url_from_env("PUBLIC_URL", schemes=["http", "https"])
 if PUBLIC_URL:
@@ -212,7 +212,7 @@ TEMPLATES = [
 # Make this unique, and don't share it with anybody.
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
-# Additional password algorithms that can be used by Saleor.
+# Additional password algorithms that can be used by WeenSpace.
 # The first algorithm defined by Django is the preferred one; users not using the
 # first algorithm will automatically be upgraded to it upon login
 PASSWORD_HASHERS = [
@@ -581,7 +581,7 @@ BEAT_PRICE_RECALCULATION_SCHEDULE_EXPIRE_AFTER_SEC = BEAT_PRICE_RECALCULATION_SC
 # Note: if a Celery task triggered by a Celery beat entry has an expiration
 # @task(expires=...), the Celery beat scheduler entry should also define
 # the expiration value. This makes sure if the task or scheduling is wrapped
-# by custom code (e.g., a Saleor fork), the expiration is still present.
+# by custom code (e.g., a WeenSpace fork), the expiration is still present.
 CELERY_BEAT_SCHEDULE = {
     "delete-empty-allocations": {
         "task": "weenspace.warehouse.tasks.delete_empty_allocations_task",
@@ -673,7 +673,7 @@ EVENT_PAYLOAD_DELETE_TASK_TIME_LIMIT = timedelta(
 )
 # Time between marking app "to remove" and removing the app from the database.
 # App is not visible for the user after removing, but it still exists in the database.
-# Saleor needs time to process sending `APP_DELETED` webhook and possible retrying,
+# WeenSpace needs time to process sending `APP_DELETED` webhook and possible retrying,
 # so we need to wait for some time before removing the App from the database.
 DELETE_APP_TTL = timedelta(seconds=parse(os.environ.get("DELETE_APP_TTL", "1 day")))
 

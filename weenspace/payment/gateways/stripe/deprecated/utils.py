@@ -59,17 +59,17 @@ def get_amount_from_stripe(amount, currency):
 
 
 def get_currency_for_stripe(currency):
-    """Convert Saleor's currency format to Stripe's currency format.
+    """Convert WeenSpace's currency format to Stripe's currency format.
 
-    Stripe's currency is using lowercase while Saleor is using uppercase.
+    Stripe's currency is using lowercase while WeenSpace is using uppercase.
     """
     return currency.lower()
 
 
 def get_currency_from_stripe(currency):
-    """Convert Stripe's currency format to Saleor's currency format.
+    """Convert Stripe's currency format to WeenSpace's currency format.
 
-    Stripe's currency is using lowercase while Saleor is using uppercase.
+    Stripe's currency is using lowercase while WeenSpace is using uppercase.
     """
     return currency.upper()
 

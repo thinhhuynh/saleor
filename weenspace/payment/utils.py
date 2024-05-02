@@ -516,7 +516,7 @@ def clean_authorize(payment: Payment):
 
 
 def validate_gateway_response(response: GatewayResponse):
-    """Validate response to be a correct format for Saleor to process."""
+    """Validate response to be a correct format for WeenSpace to process."""
     if not isinstance(response, GatewayResponse):
         raise GatewayError("Gateway needs to return a GatewayResponse obj")
 

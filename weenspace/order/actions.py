@@ -1144,7 +1144,7 @@ def __get_shipping_refund_amount(
     refund_amount: Optional[Decimal],
     shipping_price: Decimal,
 ) -> Optional[Decimal]:
-    # We set shipping refund amount only when refund amount is calculated by Saleor
+    # We set shipping refund amount only when refund amount is calculated by WeenSpace
     shipping_refund_amount = None
     if refund_shipping_costs and refund_amount is None:
         shipping_refund_amount = shipping_price

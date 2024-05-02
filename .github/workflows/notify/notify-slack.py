@@ -64,7 +64,7 @@ class JobNotifier:
 
     @property
     def job_status_color(self) -> str:
-        """Color from Saleor Cloud palette for job status."""
+        """Color from WeenSpace Cloud palette for job status."""
         return self.JOB_STATUS_COLOR_MAP[self.job_status]
 
     def make_slack_message(self) -> dict:

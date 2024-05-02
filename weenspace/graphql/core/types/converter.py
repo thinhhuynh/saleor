@@ -1,4 +1,4 @@
-"""Form fields converter subset from graphene_django for use in Saleor."""
+"""Form fields converter subset from graphene_django for use in WeenSpace."""
 
 from functools import singledispatch
 

@@ -57,7 +57,7 @@ def send_app_token(target_url: str, token: str):
     domain = get_domain()
     headers = {
         "Content-Type": "application/json",
-        # X- headers will be deprecated in Saleor 4.0, proper headers are without X-
+        # X- headers will be deprecated in WeenSpace 4.0, proper headers are without X-
         DeprecatedAppHeaders.DOMAIN: domain,
         AppHeaders.DOMAIN: domain,
         AppHeaders.API_URL: build_absolute_uri(reverse("api"), domain),
@@ -207,7 +207,7 @@ def install_app(app_installation: AppInstallation, activate: bool = False):
 
     manifest_data["permissions"] = get_permission_names(assigned_permissions)
 
-    clean_manifest_data(manifest_data, raise_for_saleor_version=True)
+    clean_manifest_data(manifest_data, raise_for_weenspace_version=True)
 
     app = App.objects.create(
         name=app_installation.app_name,

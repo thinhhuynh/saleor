@@ -1,4 +1,4 @@
-"""WSGI config for Saleor project.
+"""WSGI config for WeenSpace project.
 
 This module contains the WSGI application used by Django's development server
 and any production WSGI deployments. It should expose a module-level variable

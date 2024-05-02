@@ -136,13 +136,14 @@ def create_event_for_canceled_task(transaction_item, transaction_event):
 
 
 def create_transaction_events_migration(apps, schema_editor):
-    TransactionItem = apps.get_model("payment", "TransactionItem")
-    TransactionEvent = apps.get_model("payment", "TransactionEvent")
+    # TransactionItem = apps.get_model("payment", "TransactionItem")
+    # TransactionEvent = apps.get_model("payment", "TransactionEvent")
 
-    create_event_for_authorized_task(TransactionItem, TransactionEvent)
-    create_event_for_canceled_task(TransactionItem, TransactionEvent)
-    create_event_for_charged_task(TransactionItem, TransactionEvent)
-    create_event_for_refunded_task(TransactionItem, TransactionEvent)
+    # create_event_for_authorized_task(TransactionItem, TransactionEvent)
+    # create_event_for_canceled_task(TransactionItem, TransactionEvent)
+    # create_event_for_charged_task(TransactionItem, TransactionEvent)
+    # create_event_for_refunded_task(TransactionItem, TransactionEvent)
+    pass
 
 
 class Migration(migrations.Migration):

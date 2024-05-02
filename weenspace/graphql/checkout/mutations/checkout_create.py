@@ -72,7 +72,7 @@ class CheckoutAddressValidationRules(BaseInputObjectType):
     )
     enable_fields_normalization = graphene.Boolean(
         description=(
-            "Determines if Saleor should apply normalization on address fields. "
+            "Determines if WeenSpace should apply normalization on address fields. "
             "Example: converting city field to uppercase letters."
         ),
         default_value=True,

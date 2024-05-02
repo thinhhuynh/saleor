@@ -679,11 +679,11 @@ def get_or_create_adyen_partial_payments(
 ) -> Optional[list[Payment]]:
     """Store basic data about partial payments created by Adyen.
 
-    This is a workaround for not supporting partial payments in Saleor. Adyen can
+    This is a workaround for not supporting partial payments in WeenSpace. Adyen can
     handle partial payments on their side and send us info about them. We want to
     somehow store some basic information about this but without modifying a whole
-    Saleor logic. We're going to change it by introducing partial payments feature on
-    Saleor side.
+    WeenSpace logic. We're going to change it by introducing partial payments feature on
+    WeenSpace side.
     """
     additional_data = notification.get("additionalData", {})
     new_payments = []
@@ -1021,7 +1021,7 @@ def handle_additional_actions(
     """Handle redirect with additional actions.
 
     When a customer uses a payment method with redirect, before customer is redirected
-    back to storefront, the request goes through the Saleor. We use the data received
+    back to storefront, the request goes through the WeenSpace. We use the data received
     from Adyen, as a query params or as a post data, to finalize an additional action.
     After that, if payment doesn't require any additional action we create an order.
     In case if action data exists, we don't create an order and we include them in url.
@@ -1195,7 +1195,7 @@ def confirm_payment_and_set_back_to_confirm(payment, manager, channel_slug):
     # The workaround for refund payments when something will crash in
     # `create_order` function before processing a payment.
     # At this moment we have a payment processed on Adyen side but we have to do
-    # something more on Saleor side (ACTION_TO_CONFIRM), it's create an order in
+    # something more on WeenSpace side (ACTION_TO_CONFIRM), it's create an order in
     # this case, so before try to create the order we have to confirm the payment
     # and force change the flag to_confirm to True again.
     #
@@ -1205,7 +1205,7 @@ def confirm_payment_and_set_back_to_confirm(payment, manager, channel_slug):
     #    in `create_order` without errors. We just receive a processed transaction
     #    then.
     #
-    # This fix is related to SALEOR-4777. PR #8471
+    # This fix is related to WEENSPACE-4777. PR #8471
     gateway.confirm(payment, manager, channel_slug)
     payment.to_confirm = True
     payment.save(update_fields=["to_confirm"])

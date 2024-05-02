@@ -8,7 +8,7 @@ on:
     types: [labeled, unlabeled, opened, closed]
 
 jobs:
-  # Contributors of Saleor sometimes forget about executing migrations performance
+  # Contributors of WeenSpace sometimes forget about executing migrations performance
   # tests on PRs. This job is enforcing decision what to do. The decision is made by
   # adding/removing the label to the PR. One of the label is required.
   # Available labels:

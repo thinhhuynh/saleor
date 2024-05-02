@@ -91,7 +91,7 @@ class TaxConfigurationUpdateInput(BaseInputObjectType):
     tax_app_id = graphene.String(
         description=(
             "The tax app `App.identifier` that will be used to calculate the taxes for the given channel. "
-            "Empty value for `TAX_APP` set as `taxCalculationStrategy` means that Saleor will "
+            "Empty value for `TAX_APP` set as `taxCalculationStrategy` means that WeenSpace will "
             "iterate over all installed tax apps. If multiple tax apps exist with provided "
             "tax app id use the `App` with newest `created` date. It's possible to set plugin "
             "by using prefix `plugin:` with `PLUGIN_ID` "

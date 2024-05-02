@@ -1,1 +1,1 @@
-SALEOR_STAFF_PERMISSION = "saleor:staff"
+WEENSPACE_STAFF_PERMISSION = "weenspace:staff"

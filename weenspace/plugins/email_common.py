@@ -33,7 +33,7 @@ logger = logging.getLogger(__name__)
 DEFAULT_TEMPLATE_HELP_TEXT = (
     "An HTML template built with Handlebars template language. Leave it "
     "blank if you don't want to send an email for this action. Use the "
-    'default Saleor template by providing the "DEFAULT" string as a value.'
+    'default WeenSpace template by providing the "DEFAULT" string as a value.'
 )
 DEFAULT_SUBJECT_HELP_TEXT = "An email subject built with Handlebars template language."
 DEFAULT_EMAIL_VALUE = "DEFAULT"

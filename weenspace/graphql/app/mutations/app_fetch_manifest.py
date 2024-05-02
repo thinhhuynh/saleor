@@ -74,7 +74,7 @@ class AppFetchManifest(BaseMutation):
             extensions=cleaned_data.get("extensions", []),
             webhooks=cleaned_data.get("webhooks", []),
             audience=cleaned_data.get("audience"),
-            required_saleor_version=cleaned_data.get("requiredSaleorVersion"),
+            required_weenspace_version=cleaned_data.get("requiredSaleorVersion"),
             author=cleaned_data.get("author"),
             brand=cleaned_data.get("brand"),
         )
@@ -83,7 +83,7 @@ class AppFetchManifest(BaseMutation):
     def clean_manifest_data(cls, info, manifest_data):
         clean_manifest_data(manifest_data)
         # Brand data is not essential for the mutation, so there is a short,
-        # custom timeout instead of Saleor's default.
+        # custom timeout instead of WeenSpace's default.
         manifest_data["brand"] = fetch_brand_data(
             manifest_data, timeout=(settings.REQUESTS_CONN_EST_TIMEOUT, 5)
         )

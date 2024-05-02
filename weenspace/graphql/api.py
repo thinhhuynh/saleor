@@ -80,8 +80,7 @@ class Query(
 
 
 class Mutation(
-    AccountMutations,
-    AppMutations,
+    AccountMutations, AppMutations,
     AttributeMutations,
     ChannelMutations,
     CheckoutMutations,

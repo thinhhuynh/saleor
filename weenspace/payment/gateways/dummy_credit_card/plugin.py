@@ -32,12 +32,12 @@ class DummyCreditCardGatewayPlugin(BasePlugin):
     CONFIG_STRUCTURE = {
         "Store customers card": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should store cards.",
+            "help_text": "Determines if WeenSpace should store cards.",
             "label": "Store customers card",
         },
         "Automatic payment capture": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should automatically capture payments.",
+            "help_text": "Determines if WeenSpace should automatically capture payments.",
             "label": "Automatic payment capture",
         },
         "Supported currencies": {

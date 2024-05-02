@@ -78,7 +78,7 @@ class StripeGatewayPlugin(BasePlugin):
         },
         "automatic_payment_capture": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should automatically capture payments.",
+            "help_text": "Determines if WeenSpace should automatically capture payments.",
             "label": "Automatic payment capture",
         },
         "supported_currencies": {
@@ -202,7 +202,7 @@ class StripeGatewayPlugin(BasePlugin):
         payment_method_id = data.get("payment_method_id") if data else None
 
         setup_future_usage = None
-        # DEPRECATED: reuse_source will be removed in Saleor 4.0
+        # DEPRECATED: reuse_source will be removed in WeenSpace 4.0
         if payment_information.reuse_source:
             setup_future_usage = data.get("setup_future_usage") if data else None
 

@@ -647,7 +647,7 @@ def get_valid_shipping_methods_for_order(
     manager: "PluginsManager",
     database_connection_name: str = settings.DATABASE_CONNECTION_DEFAULT_NAME,
 ) -> list[ShippingMethodData]:
-    """Return a list of shipping methods according to Saleor's own business logic."""
+    """Return a list of shipping methods according to WeenSpace's own business logic."""
     valid_methods = get_all_shipping_methods_for_order(
         order, shipping_channel_listings, database_connection_name
     )

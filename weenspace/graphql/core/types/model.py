@@ -70,7 +70,7 @@ class ModelObjectType(Generic[MT], BaseObjectType):
     def update_meta_fields_descriptions(cls, metadata_since):
         """Set correct `ADDED_IN_X` label for meta fields.
 
-        Default metadata label in Added in Saleor 3.3.
+        Default metadata label in Added in WeenSpace 3.3.
         """
         added_label = metadata_since or ADDED_IN_33
         for field_name, field in cls._meta.fields.items():

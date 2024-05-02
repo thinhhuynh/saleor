@@ -14,7 +14,7 @@ from .jwt import (
     JWT_ACCESS_TYPE,
     JWT_THIRDPARTY_ACCESS_TYPE,
     PERMISSIONS_FIELD,
-    is_saleor_token,
+    is_weenspace_token,
     jwt_decode,
 )
 
@@ -123,7 +123,7 @@ def load_user_from_request(request):
     if request is None:
         return None
     jwt_token = get_token_from_request(request)
-    if not jwt_token or not is_saleor_token(jwt_token):
+    if not jwt_token or not is_weenspace_token(jwt_token):
         return None
     payload = jwt_decode(jwt_token)
 

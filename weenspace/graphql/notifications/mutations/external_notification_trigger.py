@@ -53,7 +53,7 @@ class ExternalNotificationTrigger(BaseMutation):
             required=True,
             description=(
                 "Channel slug. "
-                "Saleor will send a notification within a provided channel. "
+                "WeenSpace will send a notification within a provided channel. "
                 "Please, make sure that necessary plugins are active."
             ),
         )

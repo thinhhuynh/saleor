@@ -120,14 +120,14 @@ class AdyenGatewayPlugin(BasePlugin):
             "help_text": (
                 "All authorized payments will be marked as captured. This should only"
                 " be enabled if Adyen is configured to auto-capture payments."
-                " Saleor doesn't support the delayed capture Adyen feature."
+                " WeenSpace doesn't support the delayed capture Adyen feature."
             ),
             "label": "Assume all authorizations are automatically captured by Adyen",
         },
         "auto-capture": {
             "type": ConfigurationTypeField.BOOLEAN,
             "help_text": (
-                "If enabled, Saleor will automatically capture funds. If, disabled, the"
+                "If enabled, WeenSpace will automatically capture funds. If, disabled, the"
                 " funds are blocked but need to be captured manually."
             ),
             "label": "Automatically capture funds when a payment is made",
@@ -162,7 +162,7 @@ class AdyenGatewayPlugin(BasePlugin):
         "enable-native-3d-secure": {
             "type": ConfigurationTypeField.BOOLEAN,
             "help_text": (
-                "Saleor uses 3D Secure redirect authentication by default. If you want"
+                "WeenSpace uses 3D Secure redirect authentication by default. If you want"
                 " to use native 3D Secure authentication, enable this option. For more"
                 " details see Adyen documentation: native - "
                 "https://docs.adyen.com/checkout/3d-secure/native-3ds2, redirect"
@@ -250,7 +250,7 @@ class AdyenGatewayPlugin(BasePlugin):
             received notification.
             - additional actions, called when a user is redirected to an external page
             and after processing a payment is redirecting back to the storefront page.
-            The redirect request comes through the Saleor which calls Adyen API to
+            The redirect request comes through the WeenSpace which calls Adyen API to
             validate the current status of payment.
         """
         if not self.channel:
@@ -538,7 +538,7 @@ class AdyenGatewayPlugin(BasePlugin):
             and self.order_auto_confirmation
             and not action_required
         ):
-            # For enabled auto_capture on Saleor side we need to proceed an additional
+            # For enabled auto_capture on WeenSpace side we need to proceed an additional
             # action
             kind = TransactionKind.CAPTURE
             result = call_capture(

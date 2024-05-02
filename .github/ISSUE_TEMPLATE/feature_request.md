@@ -22,7 +22,7 @@ assignees: ""
 - Functional use case:
   - Permissions: As USER/APP with permision `XYZ' I should be able to 'action"
   - Webhooks: Webhook `name` event should be sent for every updated `instance name`
-  - Support for old versions: After updating, it is possible to retrieve data created in older (3.1, 3.5, 3.7) Saleor versions.
+  - Support for old versions: After updating, it is possible to retrieve data created in older (3.1, 3.5, 3.7) WeenSpace versions.
   - Error handling: Should be handled according to 'policy_name'
   - Other use-cases: ID or externalReference can be used to identify object
 - Non-functional use case

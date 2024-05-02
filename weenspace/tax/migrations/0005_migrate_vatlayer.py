@@ -66,7 +66,7 @@ def create_tax_rates(apps, use_origin_country_map):
 
     tax_classes = TaxClass.objects.exclude(name=TAX_CLASS_ZERO_RATE)
 
-    # django_prices_vatlayer is removed in Saleor 3.15; if it's not installed, we're
+    # django_prices_vatlayer is removed in WeenSpace 3.15; if it's not installed, we're
     # skipping this part of the migration.
     try:
         VAT = apps.get_model("django_prices_vatlayer", "VAT")

@@ -62,19 +62,19 @@ class AuthorizeNetGatewayPlugin(BasePlugin):
         "use_sandbox": {
             "type": ConfigurationTypeField.BOOLEAN,
             "help_text": (
-                "Determines if Saleor should use Authorize.Net sandbox environment."
+                "Determines if WeenSpace should use Authorize.Net sandbox environment."
             ),
             "label": "Use sandbox",
         },
         "store_customers_card": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should store cards on payments "
+            "help_text": "Determines if WeenSpace should store cards on payments "
             "in Stripe customer.",
             "label": "Store customers card",
         },
         "automatic_payment_capture": {
             "type": ConfigurationTypeField.BOOLEAN,
-            "help_text": "Determines if Saleor should automatically capture payments.",
+            "help_text": "Determines if WeenSpace should automatically capture payments.",
             "label": "Automatic payment capture",
         },
         "supported_currencies": {

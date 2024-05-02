@@ -14,7 +14,7 @@ def all_permissions_required(context, permissions: Iterable[BasePermissionEnum])
 
     The `context` parameter is the Context instance associated with the request.
 
-    All required Saleor's permissions must be fulfilled.
+    All required WeenSpace's permissions must be fulfilled.
     If authorization filter provided, at least one of them must be fulfilled.
     """
     if not permissions:
