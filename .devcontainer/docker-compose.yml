@@ -6,7 +6,7 @@ services:
     build:
       context: ..
       dockerfile: .devcontainer/Dockerfile
-    command: sleep infinity
+    # command: sleep infinity
     env_file:
       - common.env
       - backend.env
@@ -16,14 +16,27 @@ services:
     environment:
       - DASHBOARD_URL=http://localhost:9000/
       - ALLOWED_HOSTS=localhost,weenspace-api,weenspace-admin
+      - POSTGRES_USER=${POSTGRES_USER:-weenspace}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-weenspace}
+      - POSTGRES_HOST=${POSTGRES_HOST:-weenspace-postgres}
+      - POSTGRES_PORT=${POSTGRES_PORT:-5432}
+      - POSTGRES_DB=${POSTGRES_DB:-weenspace_dev}
     volumes:
       - ..:/app
     ports:
       - 8008:8000
 
   weenspace-admin:
-    image: ghcr.io/saleor/saleor-dashboard:3.19.5
+    image: weenspace-admin
+    build:
+      context: ./../saleor-dashboard
+      dockerfile: Dockerfile
+    # command: sleep infinity
+    env_file:
+      - ./../saleor-dashboard/admin.env
     restart: unless-stopped
+    depends_on:
+      - weenspace-api
     ports:
       - 9000:80
 
@@ -47,30 +60,30 @@ services:
     volumes:
       - weenspace-redis:/data
 
-  mailpit:
-    image: axllent/mailpit:v1.15.1
-    ports:
-      - "1025" # SMTP Server
-      - "8025" # Mailpit UI
-    restart: unless-stopped
+  # mailpit:
+  #   image: axllent/mailpit:v1.15.1
+  #   ports:
+  #     - "1025" # SMTP Server
+  #     - "8025" # Mailpit UI
+  #   restart: unless-stopped
 
-  zitadel:
-    image: 'ghcr.io/zitadel/zitadel:latest'
-    command: 'start-from-init --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode disabled'
-    environment:
-      - 'ZITADEL_DATABASE_POSTGRES_HOST=localhost'
-      - 'ZITADEL_DATABASE_POSTGRES_PORT=5432'
-      - 'ZITADEL_DATABASE_POSTGRES_DATABASE=zitadel'
-      - 'ZITADEL_DATABASE_POSTGRES_USER_USERNAME=weenspace'
-      - 'ZITADEL_DATABASE_POSTGRES_USER_PASSWORD=weenspace'
-      - 'ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE=disable'
-      - 'ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME=weenspace'
-      - 'ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD=weenspace'
-      - 'ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE=disable'
-      - 'ZITADEL_EXTERNALSECURE=false'
-    restart: 'always'
-    ports:
-      - '8089:8080'
+  # zitadel:
+  #   image: 'ghcr.io/zitadel/zitadel:latest'
+  #   command: 'start-from-init --masterkey "MasterkeyNeedsToHave32Characters" --tlsMode disabled'
+  #   environment:
+  #     - 'ZITADEL_DATABASE_POSTGRES_HOST=localhost'
+  #     - 'ZITADEL_DATABASE_POSTGRES_PORT=5432'
+  #     - 'ZITADEL_DATABASE_POSTGRES_DATABASE=zitadel'
+  #     - 'ZITADEL_DATABASE_POSTGRES_USER_USERNAME=weenspace'
+  #     - 'ZITADEL_DATABASE_POSTGRES_USER_PASSWORD=weenspace'
+  #     - 'ZITADEL_DATABASE_POSTGRES_USER_SSL_MODE=disable'
+  #     - 'ZITADEL_DATABASE_POSTGRES_ADMIN_USERNAME=weenspace'
+  #     - 'ZITADEL_DATABASE_POSTGRES_ADMIN_PASSWORD=weenspace'
+  #     - 'ZITADEL_DATABASE_POSTGRES_ADMIN_SSL_MODE=disable'
+  #     - 'ZITADEL_EXTERNALSECURE=false'
+  #   restart: 'always'
+  #   ports:
+  #     - '8089:8080'
 
 volumes:
   weenspace-db:
